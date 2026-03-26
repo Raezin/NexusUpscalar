@@ -1,0 +1,8 @@
+opencv-python
+numpy
+torch
+torchvision
+intel-extension-for-pytorch
+psutil
+tkinterdnd2
+Pillow

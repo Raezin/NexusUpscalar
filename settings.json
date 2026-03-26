@@ -1,0 +1,8 @@
+{
+  "batch_size": 1,
+  "ram_limit": 80,
+  "cpu_limit": 60,
+  "denoise": false,
+  "sharpen": false,
+  "model_path": "model_custom/nexusnet_best.pth"
+}
