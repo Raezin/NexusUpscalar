@@ -1,6 +1,6 @@
 
-pytorch2.10.0+cu128:‚Ì
-·
+pytorch2.10.0+cu128:æı
+‚
 input
 head.0.weight
 head.0.biasconv2dnode_conv2d"Conv*
@@ -9,31 +9,31 @@
 auto_pad"NOTSET†*
 strides@@†*
 	dilations@@†Jñ
-	namespaceà: __main__.NexusNetBalanced/head: torch.nn.modules.container.Sequential/head.0: torch.nn.modules.conv.Conv2d/conv2d: aten.conv2d.defaultJü
-pkg.torch.onnx.class_hierarchy}['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J¥
+	namespaceà: __main__.NexusNetEnhanced/head: torch.nn.modules.container.Sequential/head.0: torch.nn.modules.conv.Conv2d/conv2d: aten.conv2d.defaultJü
+pkg.torch.onnx.class_hierarchy}['__main__.NexusNetEnhanced', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J¥
 pkg.torch.onnx.fx_nodeô%conv2d : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%x, %p_head_0_weight, %p_head_0_bias, [1, 1], [1, 1]), kwargs = {})J>
-pkg.torch.onnx.name_scopes ['', 'head', 'head.0', 'conv2d']Jê
-pkg.torch.onnx.stack_traceÒFile "/tmp/ipykernel_2939/3071178374.py", line 99, in forward
+pkg.torch.onnx.name_scopes ['', 'head', 'head.0', 'conv2d']Jë
+pkg.torch.onnx.stack_traceÚFile "/tmp/ipykernel_2304/2682082711.py", line 132, in forward
     feat = self.head(x)
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/conv.py", line 553, in forward
     return self._conv_forward(input, self.weight, self.bias)
-…
+ 
 conv2d
-val_15prelu
+val_10prelu
 node_prelu"PReluJô
-	namespaceã: __main__.NexusNetBalanced/head: torch.nn.modules.container.Sequential/head.1: torch.nn.modules.activation.PReLU/prelu: aten.prelu.defaultJ§
-pkg.torch.onnx.class_hierarchyÅ['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.PReLU', 'aten.prelu.default']Jñ
+	namespaceã: __main__.NexusNetEnhanced/head: torch.nn.modules.container.Sequential/head.1: torch.nn.modules.activation.PReLU/prelu: aten.prelu.defaultJ§
+pkg.torch.onnx.class_hierarchyÅ['__main__.NexusNetEnhanced', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.PReLU', 'aten.prelu.default']Jñ
 pkg.torch.onnx.fx_node|%prelu : [num_users=1] = call_function[target=torch.ops.aten.prelu.default](args = (%conv2d, %p_head_1_weight), kwargs = {})J=
-pkg.torch.onnx.name_scopes['', 'head', 'head.1', 'prelu']JÅ
-pkg.torch.onnx.stack_trace‚File "/tmp/ipykernel_2939/3071178374.py", line 99, in forward
+pkg.torch.onnx.name_scopes['', 'head', 'head.1', 'prelu']JÇ
+pkg.torch.onnx.stack_trace„File "/tmp/ipykernel_2304/2682082711.py", line 132, in forward
     feat = self.head(x)
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/activation.py", line 1641, in forward
     return F.prelu(input, self.weight)
-Ô
+
 prelu
 head.2.weight
 head.2.biasconv2d_1node_conv2d_1"Conv*
@@ -42,30 +42,30 @@ node_prelu"PReluJô
 auto_pad"NOTSET†*
 strides@@†*
 	dilations@@†Jò
-	namespaceä: __main__.NexusNetBalanced/head: torch.nn.modules.container.Sequential/head.2: torch.nn.modules.conv.Conv2d/conv2d_1: aten.conv2d.defaultJü
-pkg.torch.onnx.class_hierarchy}['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J∫
+	namespaceä: __main__.NexusNetEnhanced/head: torch.nn.modules.container.Sequential/head.2: torch.nn.modules.conv.Conv2d/conv2d_1: aten.conv2d.defaultJü
+pkg.torch.onnx.class_hierarchy}['__main__.NexusNetEnhanced', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J∫
 pkg.torch.onnx.fx_nodeü%conv2d_1 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%prelu, %p_head_2_weight, %p_head_2_bias, [1, 1], [1, 1]), kwargs = {})J@
-pkg.torch.onnx.name_scopes"['', 'head', 'head.2', 'conv2d_1']Jê
-pkg.torch.onnx.stack_traceÒFile "/tmp/ipykernel_2939/3071178374.py", line 99, in forward
+pkg.torch.onnx.name_scopes"['', 'head', 'head.2', 'conv2d_1']Jë
+pkg.torch.onnx.stack_traceÚFile "/tmp/ipykernel_2304/2682082711.py", line 132, in forward
     feat = self.head(x)
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/conv.py", line 553, in forward
     return self._conv_forward(input, self.weight, self.bias)
-ÿ
+Ÿ
 conv2d_1
-val_16prelu_1node_prelu_1"PReluJõ
-	namespaceç: __main__.NexusNetBalanced/head: torch.nn.modules.container.Sequential/head.3: torch.nn.modules.activation.PReLU/prelu_1: aten.prelu.defaultJ§
-pkg.torch.onnx.class_hierarchyÅ['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.PReLU', 'aten.prelu.default']Jõ
-pkg.torch.onnx.fx_nodeÄ%prelu_1 : [num_users=2] = call_function[target=torch.ops.aten.prelu.default](args = (%conv2d_1, %p_head_3_weight), kwargs = {})J?
-pkg.torch.onnx.name_scopes!['', 'head', 'head.3', 'prelu_1']JÅ
-pkg.torch.onnx.stack_trace‚File "/tmp/ipykernel_2939/3071178374.py", line 99, in forward
+val_11prelu_1node_prelu_1"PReluJõ
+	namespaceç: __main__.NexusNetEnhanced/head: torch.nn.modules.container.Sequential/head.3: torch.nn.modules.activation.PReLU/prelu_1: aten.prelu.defaultJ§
+pkg.torch.onnx.class_hierarchyÅ['__main__.NexusNetEnhanced', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.PReLU', 'aten.prelu.default']Jõ
+pkg.torch.onnx.fx_nodeÄ%prelu_1 : [num_users=3] = call_function[target=torch.ops.aten.prelu.default](args = (%conv2d_1, %p_head_3_weight), kwargs = {})J?
+pkg.torch.onnx.name_scopes!['', 'head', 'head.3', 'prelu_1']JÇ
+pkg.torch.onnx.stack_trace„File "/tmp/ipykernel_2304/2682082711.py", line 132, in forward
     feat = self.head(x)
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/activation.py", line 1641, in forward
     return F.prelu(input, self.weight)
-Œ
+’
 
 prelu_1
 body.0.conv1.weight
@@ -74,1001 +74,872 @@ node_prelu"PReluJô
 pads@@@@†*
 auto_pad"NOTSET†*
 strides@@†*
-	dilations@@†J∆
-	namespace∏: __main__.NexusNetBalanced/body: torch.nn.modules.container.Sequential/body.0: __main__.EfficientResidualBlock/body.0.conv1: torch.nn.modules.conv.Conv2d/conv2d_2: aten.conv2d.defaultJ√
-pkg.torch.onnx.class_hierarchy†['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', '__main__.EfficientResidualBlock', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J»
+	dilations@@†J≈
+	namespace∑: __main__.NexusNetEnhanced/body: torch.nn.modules.container.Sequential/body.0: __main__.DetailPreservingBlock/body.0.conv1: torch.nn.modules.conv.Conv2d/conv2d_2: aten.conv2d.defaultJ¬
+pkg.torch.onnx.class_hierarchyü['__main__.NexusNetEnhanced', 'torch.nn.modules.container.Sequential', '__main__.DetailPreservingBlock', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J»
 pkg.torch.onnx.fx_node≠%conv2d_2 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%prelu_1, %p_body_0_conv1_weight, %p_body_0_conv1_bias, [1, 1], [1, 1]), kwargs = {})JP
-pkg.torch.onnx.name_scopes2['', 'body', 'body.0', 'body.0.conv1', 'conv2d_2']JÒ
-pkg.torch.onnx.stack_trace“File "/tmp/ipykernel_2939/3071178374.py", line 100, in forward
+pkg.torch.onnx.name_scopes2['', 'body', 'body.0', 'body.0.conv1', 'conv2d_2']J˙
+pkg.torch.onnx.stack_trace€File "/tmp/ipykernel_2304/2682082711.py", line 133, in forward
     feat = self.body(feat)
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/tmp/ipykernel_2939/3071178374.py", line 52, in forward
-    residual = self.conv1(x)
+  File "/tmp/ipykernel_2304/2682082711.py", line 42, in forward
+    feat1 = self.prelu(self.conv1(x))
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/conv.py", line 553, in forward
     return self._conv_forward(input, self.weight, self.bias)
-´	
+ß	
 conv2d_2
-val_17prelu_2node_prelu_2"PReluJ 
-	namespaceº: __main__.NexusNetBalanced/body: torch.nn.modules.container.Sequential/body.0: __main__.EfficientResidualBlock/body.0.prelu1: torch.nn.modules.activation.PReLU/prelu_2: aten.prelu.defaultJ«
-pkg.torch.onnx.class_hierarchy§['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', '__main__.EfficientResidualBlock', 'torch.nn.modules.activation.PReLU', 'aten.prelu.default']J¢
-pkg.torch.onnx.fx_nodeá%prelu_2 : [num_users=1] = call_function[target=torch.ops.aten.prelu.default](args = (%conv2d_2, %p_body_0_prelu1_weight), kwargs = {})JP
-pkg.torch.onnx.name_scopes2['', 'body', 'body.0', 'body.0.prelu1', 'prelu_2']JÍ
-pkg.torch.onnx.stack_traceÀFile "/tmp/ipykernel_2939/3071178374.py", line 100, in forward
+val_12prelu_2node_prelu_2"PReluJ»
+	namespace∫: __main__.NexusNetEnhanced/body: torch.nn.modules.container.Sequential/body.0: __main__.DetailPreservingBlock/body.0.prelu: torch.nn.modules.activation.PReLU/prelu_2: aten.prelu.defaultJ∆
+pkg.torch.onnx.class_hierarchy£['__main__.NexusNetEnhanced', 'torch.nn.modules.container.Sequential', '__main__.DetailPreservingBlock', 'torch.nn.modules.activation.PReLU', 'aten.prelu.default']J°
+pkg.torch.onnx.fx_nodeÜ%prelu_2 : [num_users=1] = call_function[target=torch.ops.aten.prelu.default](args = (%conv2d_2, %p_body_0_prelu_weight), kwargs = {})JO
+pkg.torch.onnx.name_scopes1['', 'body', 'body.0', 'body.0.prelu', 'prelu_2']JÎ
+pkg.torch.onnx.stack_traceÃFile "/tmp/ipykernel_2304/2682082711.py", line 133, in forward
     feat = self.body(feat)
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/tmp/ipykernel_2939/3071178374.py", line 53, in forward
-    residual = self.prelu1(residual)
+  File "/tmp/ipykernel_2304/2682082711.py", line 42, in forward
+    feat1 = self.prelu(self.conv1(x))
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/activation.py", line 1641, in forward
     return F.prelu(input, self.weight)
 ’
 
-prelu_2
+prelu_1
 body.0.conv2.weight
 body.0.conv2.biasconv2d_3node_conv2d_3"Conv*
 group†*
-pads@@@@†*
+pads@@@@†*
 auto_pad"NOTSET†*
 strides@@†*
-	dilations@@†J∆
-	namespace∏: __main__.NexusNetBalanced/body: torch.nn.modules.container.Sequential/body.0: __main__.EfficientResidualBlock/body.0.conv2: torch.nn.modules.conv.Conv2d/conv2d_3: aten.conv2d.defaultJ√
-pkg.torch.onnx.class_hierarchy†['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', '__main__.EfficientResidualBlock', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J»
-pkg.torch.onnx.fx_node≠%conv2d_3 : [num_users=2] = call_function[target=torch.ops.aten.conv2d.default](args = (%prelu_2, %p_body_0_conv2_weight, %p_body_0_conv2_bias, [1, 1], [1, 1]), kwargs = {})JP
-pkg.torch.onnx.name_scopes2['', 'body', 'body.0', 'body.0.conv2', 'conv2d_3']J¯
-pkg.torch.onnx.stack_traceŸFile "/tmp/ipykernel_2939/3071178374.py", line 100, in forward
+	dilations@@†J≈
+	namespace∑: __main__.NexusNetEnhanced/body: torch.nn.modules.container.Sequential/body.0: __main__.DetailPreservingBlock/body.0.conv2: torch.nn.modules.conv.Conv2d/conv2d_3: aten.conv2d.defaultJ¬
+pkg.torch.onnx.class_hierarchyü['__main__.NexusNetEnhanced', 'torch.nn.modules.container.Sequential', '__main__.DetailPreservingBlock', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J»
+pkg.torch.onnx.fx_node≠%conv2d_3 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%prelu_1, %p_body_0_conv2_weight, %p_body_0_conv2_bias, [1, 1], [2, 2]), kwargs = {})JP
+pkg.torch.onnx.name_scopes2['', 'body', 'body.0', 'body.0.conv2', 'conv2d_3']J˙
+pkg.torch.onnx.stack_trace€File "/tmp/ipykernel_2304/2682082711.py", line 133, in forward
     feat = self.body(feat)
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/tmp/ipykernel_2939/3071178374.py", line 54, in forward
-    residual = self.conv2(residual)
+  File "/tmp/ipykernel_2304/2682082711.py", line 43, in forward
+    feat2 = self.prelu(self.conv2(x))
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/conv.py", line 553, in forward
     return self._conv_forward(input, self.weight, self.bias)
-⁄
+ß	
 conv2d_3
-val_20mean	node_mean"
-ReduceMean*
-noop_with_empty_axes †*
-keepdims†Jà
-	namespace˙: __main__.NexusNetBalanced/body: torch.nn.modules.container.Sequential/body.0: __main__.EfficientResidualBlock/body.0.attention: torch.nn.modules.container.Sequential/body.0.attention.0: torch.nn.modules.pooling.AdaptiveAvgPool2d/mean: aten.mean.dimJÙ
-pkg.torch.onnx.class_hierarchy—['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', '__main__.EfficientResidualBlock', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.pooling.AdaptiveAvgPool2d', 'aten.mean.dim']Jê
-pkg.torch.onnx.fx_nodev%mean : [num_users=1] = call_function[target=torch.ops.aten.mean.dim](args = (%conv2d_3, [-1, -2], True), kwargs = {})Jf
-pkg.torch.onnx.name_scopesH['', 'body', 'body.0', 'body.0.attention', 'body.0.attention.0', 'mean']J˝
-pkg.torch.onnx.stack_traceﬁFile "/tmp/ipykernel_2939/3071178374.py", line 100, in forward
+val_12prelu_3node_prelu_3"PReluJ»
+	namespace∫: __main__.NexusNetEnhanced/body: torch.nn.modules.container.Sequential/body.0: __main__.DetailPreservingBlock/body.0.prelu: torch.nn.modules.activation.PReLU/prelu_3: aten.prelu.defaultJ∆
+pkg.torch.onnx.class_hierarchy£['__main__.NexusNetEnhanced', 'torch.nn.modules.container.Sequential', '__main__.DetailPreservingBlock', 'torch.nn.modules.activation.PReLU', 'aten.prelu.default']J°
+pkg.torch.onnx.fx_nodeÜ%prelu_3 : [num_users=1] = call_function[target=torch.ops.aten.prelu.default](args = (%conv2d_3, %p_body_0_prelu_weight), kwargs = {})JO
+pkg.torch.onnx.name_scopes1['', 'body', 'body.0', 'body.0.prelu', 'prelu_3']JÎ
+pkg.torch.onnx.stack_traceÃFile "/tmp/ipykernel_2304/2682082711.py", line 133, in forward
     feat = self.body(feat)
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/tmp/ipykernel_2939/3071178374.py", line 55, in forward
-    attention = self.attention(residual)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/pooling.py", line 1510, in forward
-    return F.adaptive_avg_pool2d(input, self.output_size)
-‹
-mean
-body.0.attention.1.weight
-body.0.attention.1.biasconv2d_4node_conv2d_4"Conv*
-group†*
-pads@ @ @ @ †*
-auto_pad"NOTSET†*
-strides@@†*
-	dilations@@†JÑ
-	namespaceˆ: __main__.NexusNetBalanced/body: torch.nn.modules.container.Sequential/body.0: __main__.EfficientResidualBlock/body.0.attention: torch.nn.modules.container.Sequential/body.0.attention.1: torch.nn.modules.conv.Conv2d/conv2d_4: aten.conv2d.defaultJÏ
-pkg.torch.onnx.class_hierarchy…['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', '__main__.EfficientResidualBlock', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J¡
-pkg.torch.onnx.fx_node¶%conv2d_4 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%mean, %p_body_0_attention_1_weight, %p_body_0_attention_1_bias), kwargs = {})Jj
-pkg.torch.onnx.name_scopesL['', 'body', 'body.0', 'body.0.attention', 'body.0.attention.1', 'conv2d_4']J¸
-pkg.torch.onnx.stack_trace›File "/tmp/ipykernel_2939/3071178374.py", line 100, in forward
-    feat = self.body(feat)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/tmp/ipykernel_2939/3071178374.py", line 55, in forward
-    attention = self.attention(residual)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/conv.py", line 553, in forward
-    return self._conv_forward(input, self.weight, self.bias)
-≤
-conv2d_4
-val_21prelu_3node_prelu_3"PReluJá
-	namespace˘: __main__.NexusNetBalanced/body: torch.nn.modules.container.Sequential/body.0: __main__.EfficientResidualBlock/body.0.attention: torch.nn.modules.container.Sequential/body.0.attention.2: torch.nn.modules.activation.PReLU/prelu_3: aten.prelu.defaultJ
-pkg.torch.onnx.class_hierarchyÕ['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', '__main__.EfficientResidualBlock', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.PReLU', 'aten.prelu.default']Jß
-pkg.torch.onnx.fx_nodeå%prelu_3 : [num_users=1] = call_function[target=torch.ops.aten.prelu.default](args = (%conv2d_4, %p_body_0_attention_2_weight), kwargs = {})Ji
-pkg.torch.onnx.name_scopesK['', 'body', 'body.0', 'body.0.attention', 'body.0.attention.2', 'prelu_3']JÌ
-pkg.torch.onnx.stack_traceŒFile "/tmp/ipykernel_2939/3071178374.py", line 100, in forward
-    feat = self.body(feat)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/tmp/ipykernel_2939/3071178374.py", line 55, in forward
-    attention = self.attention(residual)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
+  File "/tmp/ipykernel_2304/2682082711.py", line 43, in forward
+    feat2 = self.prelu(self.conv2(x))
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/activation.py", line 1641, in forward
     return F.prelu(input, self.weight)
-‚
-prelu_3
-body.0.attention.3.weight
-body.0.attention.3.biasconv2d_5node_conv2d_5"Conv*
+§
+prelu_2
+prelu_3catnode_cat"Concat*
+axis†Jí
+	namespaceÑ: __main__.NexusNetEnhanced/body: torch.nn.modules.container.Sequential/body.0: __main__.DetailPreservingBlock/cat: aten.cat.defaultJû
+pkg.torch.onnx.class_hierarchy|['__main__.NexusNetEnhanced', 'torch.nn.modules.container.Sequential', '__main__.DetailPreservingBlock', 'aten.cat.default']Jê
+pkg.torch.onnx.fx_nodev%cat : [num_users=1] = call_function[target=torch.ops.aten.cat.default](args = ([%prelu_2, %prelu_3], 1), kwargs = {})J;
+pkg.torch.onnx.name_scopes['', 'body', 'body.0', 'cat']JÂ
+pkg.torch.onnx.stack_trace∆File "/tmp/ipykernel_2304/2682082711.py", line 133, in forward
+    feat = self.body(feat)
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/tmp/ipykernel_2304/2682082711.py", line 45, in forward
+    concat = torch.cat([feat1, feat2], dim=1)
+Ø
+
+cat
+body.0.fuse.weight
+body.0.fuse.biasconv2d_4node_conv2d_4"Conv*
 group†*
 pads@ @ @ @ †*
 auto_pad"NOTSET†*
 strides@@†*
-	dilations@@†JÑ
-	namespaceˆ: __main__.NexusNetBalanced/body: torch.nn.modules.container.Sequential/body.0: __main__.EfficientResidualBlock/body.0.attention: torch.nn.modules.container.Sequential/body.0.attention.3: torch.nn.modules.conv.Conv2d/conv2d_5: aten.conv2d.defaultJÏ
-pkg.torch.onnx.class_hierarchy…['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', '__main__.EfficientResidualBlock', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']Jƒ
-pkg.torch.onnx.fx_node©%conv2d_5 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%prelu_3, %p_body_0_attention_3_weight, %p_body_0_attention_3_bias), kwargs = {})Jj
-pkg.torch.onnx.name_scopesL['', 'body', 'body.0', 'body.0.attention', 'body.0.attention.3', 'conv2d_5']J¸
-pkg.torch.onnx.stack_trace›File "/tmp/ipykernel_2939/3071178374.py", line 100, in forward
+	dilations@@†Jƒ
+	namespace∂: __main__.NexusNetEnhanced/body: torch.nn.modules.container.Sequential/body.0: __main__.DetailPreservingBlock/body.0.fuse: torch.nn.modules.conv.Conv2d/conv2d_4: aten.conv2d.defaultJ¬
+pkg.torch.onnx.class_hierarchyü['__main__.NexusNetEnhanced', 'torch.nn.modules.container.Sequential', '__main__.DetailPreservingBlock', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J≤
+pkg.torch.onnx.fx_nodeó%conv2d_4 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%cat, %p_body_0_fuse_weight, %p_body_0_fuse_bias), kwargs = {})JO
+pkg.torch.onnx.name_scopes1['', 'body', 'body.0', 'body.0.fuse', 'conv2d_4']JÚ
+pkg.torch.onnx.stack_trace”File "/tmp/ipykernel_2304/2682082711.py", line 133, in forward
     feat = self.body(feat)
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/tmp/ipykernel_2939/3071178374.py", line 55, in forward
-    attention = self.attention(residual)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
+  File "/tmp/ipykernel_2304/2682082711.py", line 47, in forward
+    fused = self.fuse(concat)
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/conv.py", line 553, in forward
     return self._conv_forward(input, self.weight, self.bias)
-ê
-conv2d_5sigmoidnode_sigmoid"SigmoidJã
-	namespace˝: __main__.NexusNetBalanced/body: torch.nn.modules.container.Sequential/body.0: __main__.EfficientResidualBlock/body.0.attention: torch.nn.modules.container.Sequential/body.0.attention.4: torch.nn.modules.activation.Sigmoid/sigmoid: aten.sigmoid.defaultJÙ
-pkg.torch.onnx.class_hierarchy—['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', '__main__.EfficientResidualBlock', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.Sigmoid', 'aten.sigmoid.default']Jã
-pkg.torch.onnx.fx_nodeq%sigmoid : [num_users=1] = call_function[target=torch.ops.aten.sigmoid.default](args = (%conv2d_5,), kwargs = {})Ji
-pkg.torch.onnx.name_scopesK['', 'body', 'body.0', 'body.0.attention', 'body.0.attention.4', 'sigmoid']JÂ
-pkg.torch.onnx.stack_trace∆File "/tmp/ipykernel_2939/3071178374.py", line 100, in forward
-    feat = self.body(feat)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/tmp/ipykernel_2939/3071178374.py", line 55, in forward
-    attention = self.attention(residual)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/activation.py", line 358, in forward
-    return torch.sigmoid(input)
-ï
-conv2d_3
-sigmoidmul_57node_mul_57"MulJï
-	namespaceá: __main__.NexusNetBalanced/body: torch.nn.modules.container.Sequential/body.0: __main__.EfficientResidualBlock/mul_57: aten.mul.TensorJû
-pkg.torch.onnx.class_hierarchy|['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', '__main__.EfficientResidualBlock', 'aten.mul.Tensor']Jé
-pkg.torch.onnx.fx_nodet%mul_57 : [num_users=1] = call_function[target=torch.ops.aten.mul.Tensor](args = (%conv2d_3, %sigmoid), kwargs = {})J>
-pkg.torch.onnx.name_scopes ['', 'body', 'body.0', 'mul_57']J€
-pkg.torch.onnx.stack_traceºFile "/tmp/ipykernel_2939/3071178374.py", line 100, in forward
-    feat = self.body(feat)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/tmp/ipykernel_2939/3071178374.py", line 56, in forward
-    residual = residual * attention
-Ö
+Ñ
 prelu_1
-mul_57add_67node_add_67"AddJï
-	namespaceá: __main__.NexusNetBalanced/body: torch.nn.modules.container.Sequential/body.0: __main__.EfficientResidualBlock/add_67: aten.add.TensorJû
-pkg.torch.onnx.class_hierarchy|['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', '__main__.EfficientResidualBlock', 'aten.add.Tensor']Jå
-pkg.torch.onnx.fx_noder%add_67 : [num_users=2] = call_function[target=torch.ops.aten.add.Tensor](args = (%prelu_1, %mul_57), kwargs = {})J>
-pkg.torch.onnx.name_scopes ['', 'body', 'body.0', 'add_67']Jœ
-pkg.torch.onnx.stack_trace∞File "/tmp/ipykernel_2939/3071178374.py", line 100, in forward
+conv2d_4add_50node_add_50"AddJî
+	namespaceÜ: __main__.NexusNetEnhanced/body: torch.nn.modules.container.Sequential/body.0: __main__.DetailPreservingBlock/add_50: aten.add.TensorJù
+pkg.torch.onnx.class_hierarchy{['__main__.NexusNetEnhanced', 'torch.nn.modules.container.Sequential', '__main__.DetailPreservingBlock', 'aten.add.Tensor']Jé
+pkg.torch.onnx.fx_nodet%add_50 : [num_users=3] = call_function[target=torch.ops.aten.add.Tensor](args = (%prelu_1, %conv2d_4), kwargs = {})J>
+pkg.torch.onnx.name_scopes ['', 'body', 'body.0', 'add_50']JÃ
+pkg.torch.onnx.stack_trace≠File "/tmp/ipykernel_2304/2682082711.py", line 133, in forward
     feat = self.body(feat)
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/tmp/ipykernel_2939/3071178374.py", line 57, in forward
-    return x + residual
-Ã
+  File "/tmp/ipykernel_2304/2682082711.py", line 48, in forward
+    return x + fused
+”
 
-add_67
+add_50
 body.1.conv1.weight
-body.1.conv1.biasconv2d_6node_conv2d_6"Conv*
+body.1.conv1.biasconv2d_5node_conv2d_5"Conv*
 group†*
 pads@@@@†*
 auto_pad"NOTSET†*
 strides@@†*
-	dilations@@†J∆
-	namespace∏: __main__.NexusNetBalanced/body: torch.nn.modules.container.Sequential/body.1: __main__.EfficientResidualBlock/body.1.conv1: torch.nn.modules.conv.Conv2d/conv2d_6: aten.conv2d.defaultJ√
-pkg.torch.onnx.class_hierarchy†['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', '__main__.EfficientResidualBlock', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J«
-pkg.torch.onnx.fx_node¨%conv2d_6 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%add_67, %p_body_1_conv1_weight, %p_body_1_conv1_bias, [1, 1], [1, 1]), kwargs = {})JP
-pkg.torch.onnx.name_scopes2['', 'body', 'body.1', 'body.1.conv1', 'conv2d_6']JÒ
-pkg.torch.onnx.stack_trace“File "/tmp/ipykernel_2939/3071178374.py", line 100, in forward
+	dilations@@†J≈
+	namespace∑: __main__.NexusNetEnhanced/body: torch.nn.modules.container.Sequential/body.1: __main__.DetailPreservingBlock/body.1.conv1: torch.nn.modules.conv.Conv2d/conv2d_5: aten.conv2d.defaultJ¬
+pkg.torch.onnx.class_hierarchyü['__main__.NexusNetEnhanced', 'torch.nn.modules.container.Sequential', '__main__.DetailPreservingBlock', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J«
+pkg.torch.onnx.fx_node¨%conv2d_5 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%add_50, %p_body_1_conv1_weight, %p_body_1_conv1_bias, [1, 1], [1, 1]), kwargs = {})JP
+pkg.torch.onnx.name_scopes2['', 'body', 'body.1', 'body.1.conv1', 'conv2d_5']J˙
+pkg.torch.onnx.stack_trace€File "/tmp/ipykernel_2304/2682082711.py", line 133, in forward
     feat = self.body(feat)
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/tmp/ipykernel_2939/3071178374.py", line 52, in forward
-    residual = self.conv1(x)
+  File "/tmp/ipykernel_2304/2682082711.py", line 42, in forward
+    feat1 = self.prelu(self.conv1(x))
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/conv.py", line 553, in forward
     return self._conv_forward(input, self.weight, self.bias)
-´	
-conv2d_6
-val_22prelu_4node_prelu_4"PReluJ 
-	namespaceº: __main__.NexusNetBalanced/body: torch.nn.modules.container.Sequential/body.1: __main__.EfficientResidualBlock/body.1.prelu1: torch.nn.modules.activation.PReLU/prelu_4: aten.prelu.defaultJ«
-pkg.torch.onnx.class_hierarchy§['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', '__main__.EfficientResidualBlock', 'torch.nn.modules.activation.PReLU', 'aten.prelu.default']J¢
-pkg.torch.onnx.fx_nodeá%prelu_4 : [num_users=1] = call_function[target=torch.ops.aten.prelu.default](args = (%conv2d_6, %p_body_1_prelu1_weight), kwargs = {})JP
-pkg.torch.onnx.name_scopes2['', 'body', 'body.1', 'body.1.prelu1', 'prelu_4']JÍ
-pkg.torch.onnx.stack_traceÀFile "/tmp/ipykernel_2939/3071178374.py", line 100, in forward
+ß	
+conv2d_5
+val_14prelu_4node_prelu_4"PReluJ»
+	namespace∫: __main__.NexusNetEnhanced/body: torch.nn.modules.container.Sequential/body.1: __main__.DetailPreservingBlock/body.1.prelu: torch.nn.modules.activation.PReLU/prelu_4: aten.prelu.defaultJ∆
+pkg.torch.onnx.class_hierarchy£['__main__.NexusNetEnhanced', 'torch.nn.modules.container.Sequential', '__main__.DetailPreservingBlock', 'torch.nn.modules.activation.PReLU', 'aten.prelu.default']J°
+pkg.torch.onnx.fx_nodeÜ%prelu_4 : [num_users=1] = call_function[target=torch.ops.aten.prelu.default](args = (%conv2d_5, %p_body_1_prelu_weight), kwargs = {})JO
+pkg.torch.onnx.name_scopes1['', 'body', 'body.1', 'body.1.prelu', 'prelu_4']JÎ
+pkg.torch.onnx.stack_traceÃFile "/tmp/ipykernel_2304/2682082711.py", line 133, in forward
     feat = self.body(feat)
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/tmp/ipykernel_2939/3071178374.py", line 53, in forward
-    residual = self.prelu1(residual)
+  File "/tmp/ipykernel_2304/2682082711.py", line 42, in forward
+    feat1 = self.prelu(self.conv1(x))
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/activation.py", line 1641, in forward
     return F.prelu(input, self.weight)
-’
+”
 
-prelu_4
+add_50
 body.1.conv2.weight
-body.1.conv2.biasconv2d_7node_conv2d_7"Conv*
+body.1.conv2.biasconv2d_6node_conv2d_6"Conv*
+group†*
+pads@@@@†*
+auto_pad"NOTSET†*
+strides@@†*
+	dilations@@†J≈
+	namespace∑: __main__.NexusNetEnhanced/body: torch.nn.modules.container.Sequential/body.1: __main__.DetailPreservingBlock/body.1.conv2: torch.nn.modules.conv.Conv2d/conv2d_6: aten.conv2d.defaultJ¬
+pkg.torch.onnx.class_hierarchyü['__main__.NexusNetEnhanced', 'torch.nn.modules.container.Sequential', '__main__.DetailPreservingBlock', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J«
+pkg.torch.onnx.fx_node¨%conv2d_6 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%add_50, %p_body_1_conv2_weight, %p_body_1_conv2_bias, [1, 1], [2, 2]), kwargs = {})JP
+pkg.torch.onnx.name_scopes2['', 'body', 'body.1', 'body.1.conv2', 'conv2d_6']J˙
+pkg.torch.onnx.stack_trace€File "/tmp/ipykernel_2304/2682082711.py", line 133, in forward
+    feat = self.body(feat)
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/tmp/ipykernel_2304/2682082711.py", line 43, in forward
+    feat2 = self.prelu(self.conv2(x))
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/conv.py", line 553, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+ß	
+conv2d_6
+val_14prelu_5node_prelu_5"PReluJ»
+	namespace∫: __main__.NexusNetEnhanced/body: torch.nn.modules.container.Sequential/body.1: __main__.DetailPreservingBlock/body.1.prelu: torch.nn.modules.activation.PReLU/prelu_5: aten.prelu.defaultJ∆
+pkg.torch.onnx.class_hierarchy£['__main__.NexusNetEnhanced', 'torch.nn.modules.container.Sequential', '__main__.DetailPreservingBlock', 'torch.nn.modules.activation.PReLU', 'aten.prelu.default']J°
+pkg.torch.onnx.fx_nodeÜ%prelu_5 : [num_users=1] = call_function[target=torch.ops.aten.prelu.default](args = (%conv2d_6, %p_body_1_prelu_weight), kwargs = {})JO
+pkg.torch.onnx.name_scopes1['', 'body', 'body.1', 'body.1.prelu', 'prelu_5']JÎ
+pkg.torch.onnx.stack_traceÃFile "/tmp/ipykernel_2304/2682082711.py", line 133, in forward
+    feat = self.body(feat)
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/tmp/ipykernel_2304/2682082711.py", line 43, in forward
+    feat2 = self.prelu(self.conv2(x))
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/activation.py", line 1641, in forward
+    return F.prelu(input, self.weight)
+Æ
+prelu_4
+prelu_5cat_1
+node_cat_1"Concat*
+axis†Jî
+	namespaceÜ: __main__.NexusNetEnhanced/body: torch.nn.modules.container.Sequential/body.1: __main__.DetailPreservingBlock/cat_1: aten.cat.defaultJû
+pkg.torch.onnx.class_hierarchy|['__main__.NexusNetEnhanced', 'torch.nn.modules.container.Sequential', '__main__.DetailPreservingBlock', 'aten.cat.default']Jí
+pkg.torch.onnx.fx_nodex%cat_1 : [num_users=1] = call_function[target=torch.ops.aten.cat.default](args = ([%prelu_4, %prelu_5], 1), kwargs = {})J=
+pkg.torch.onnx.name_scopes['', 'body', 'body.1', 'cat_1']JÂ
+pkg.torch.onnx.stack_trace∆File "/tmp/ipykernel_2304/2682082711.py", line 133, in forward
+    feat = self.body(feat)
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/tmp/ipykernel_2304/2682082711.py", line 45, in forward
+    concat = torch.cat([feat1, feat2], dim=1)
+≥
+
+cat_1
+body.1.fuse.weight
+body.1.fuse.biasconv2d_7node_conv2d_7"Conv*
+group†*
+pads@ @ @ @ †*
+auto_pad"NOTSET†*
+strides@@†*
+	dilations@@†Jƒ
+	namespace∂: __main__.NexusNetEnhanced/body: torch.nn.modules.container.Sequential/body.1: __main__.DetailPreservingBlock/body.1.fuse: torch.nn.modules.conv.Conv2d/conv2d_7: aten.conv2d.defaultJ¬
+pkg.torch.onnx.class_hierarchyü['__main__.NexusNetEnhanced', 'torch.nn.modules.container.Sequential', '__main__.DetailPreservingBlock', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J¥
+pkg.torch.onnx.fx_nodeô%conv2d_7 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%cat_1, %p_body_1_fuse_weight, %p_body_1_fuse_bias), kwargs = {})JO
+pkg.torch.onnx.name_scopes1['', 'body', 'body.1', 'body.1.fuse', 'conv2d_7']JÚ
+pkg.torch.onnx.stack_trace”File "/tmp/ipykernel_2304/2682082711.py", line 133, in forward
+    feat = self.body(feat)
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/tmp/ipykernel_2304/2682082711.py", line 47, in forward
+    fused = self.fuse(concat)
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/conv.py", line 553, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+Ç
+add_50
+conv2d_7add_86node_add_86"AddJî
+	namespaceÜ: __main__.NexusNetEnhanced/body: torch.nn.modules.container.Sequential/body.1: __main__.DetailPreservingBlock/add_86: aten.add.TensorJù
+pkg.torch.onnx.class_hierarchy{['__main__.NexusNetEnhanced', 'torch.nn.modules.container.Sequential', '__main__.DetailPreservingBlock', 'aten.add.Tensor']Jç
+pkg.torch.onnx.fx_nodes%add_86 : [num_users=3] = call_function[target=torch.ops.aten.add.Tensor](args = (%add_50, %conv2d_7), kwargs = {})J>
+pkg.torch.onnx.name_scopes ['', 'body', 'body.1', 'add_86']JÃ
+pkg.torch.onnx.stack_trace≠File "/tmp/ipykernel_2304/2682082711.py", line 133, in forward
+    feat = self.body(feat)
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/tmp/ipykernel_2304/2682082711.py", line 48, in forward
+    return x + fused
+”
+
+add_86
+body.2.conv1.weight
+body.2.conv1.biasconv2d_8node_conv2d_8"Conv*
+group†*
+pads@@@@†*
+auto_pad"NOTSET†*
+strides@@†*
+	dilations@@†J≈
+	namespace∑: __main__.NexusNetEnhanced/body: torch.nn.modules.container.Sequential/body.2: __main__.DetailPreservingBlock/body.2.conv1: torch.nn.modules.conv.Conv2d/conv2d_8: aten.conv2d.defaultJ¬
+pkg.torch.onnx.class_hierarchyü['__main__.NexusNetEnhanced', 'torch.nn.modules.container.Sequential', '__main__.DetailPreservingBlock', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J«
+pkg.torch.onnx.fx_node¨%conv2d_8 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%add_86, %p_body_2_conv1_weight, %p_body_2_conv1_bias, [1, 1], [1, 1]), kwargs = {})JP
+pkg.torch.onnx.name_scopes2['', 'body', 'body.2', 'body.2.conv1', 'conv2d_8']J˙
+pkg.torch.onnx.stack_trace€File "/tmp/ipykernel_2304/2682082711.py", line 133, in forward
+    feat = self.body(feat)
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/tmp/ipykernel_2304/2682082711.py", line 42, in forward
+    feat1 = self.prelu(self.conv1(x))
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/conv.py", line 553, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+ß	
+conv2d_8
+val_16prelu_6node_prelu_6"PReluJ»
+	namespace∫: __main__.NexusNetEnhanced/body: torch.nn.modules.container.Sequential/body.2: __main__.DetailPreservingBlock/body.2.prelu: torch.nn.modules.activation.PReLU/prelu_6: aten.prelu.defaultJ∆
+pkg.torch.onnx.class_hierarchy£['__main__.NexusNetEnhanced', 'torch.nn.modules.container.Sequential', '__main__.DetailPreservingBlock', 'torch.nn.modules.activation.PReLU', 'aten.prelu.default']J°
+pkg.torch.onnx.fx_nodeÜ%prelu_6 : [num_users=1] = call_function[target=torch.ops.aten.prelu.default](args = (%conv2d_8, %p_body_2_prelu_weight), kwargs = {})JO
+pkg.torch.onnx.name_scopes1['', 'body', 'body.2', 'body.2.prelu', 'prelu_6']JÎ
+pkg.torch.onnx.stack_traceÃFile "/tmp/ipykernel_2304/2682082711.py", line 133, in forward
+    feat = self.body(feat)
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/tmp/ipykernel_2304/2682082711.py", line 42, in forward
+    feat1 = self.prelu(self.conv1(x))
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/activation.py", line 1641, in forward
+    return F.prelu(input, self.weight)
+”
+
+add_86
+body.2.conv2.weight
+body.2.conv2.biasconv2d_9node_conv2d_9"Conv*
+group†*
+pads@@@@†*
+auto_pad"NOTSET†*
+strides@@†*
+	dilations@@†J≈
+	namespace∑: __main__.NexusNetEnhanced/body: torch.nn.modules.container.Sequential/body.2: __main__.DetailPreservingBlock/body.2.conv2: torch.nn.modules.conv.Conv2d/conv2d_9: aten.conv2d.defaultJ¬
+pkg.torch.onnx.class_hierarchyü['__main__.NexusNetEnhanced', 'torch.nn.modules.container.Sequential', '__main__.DetailPreservingBlock', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J«
+pkg.torch.onnx.fx_node¨%conv2d_9 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%add_86, %p_body_2_conv2_weight, %p_body_2_conv2_bias, [1, 1], [2, 2]), kwargs = {})JP
+pkg.torch.onnx.name_scopes2['', 'body', 'body.2', 'body.2.conv2', 'conv2d_9']J˙
+pkg.torch.onnx.stack_trace€File "/tmp/ipykernel_2304/2682082711.py", line 133, in forward
+    feat = self.body(feat)
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/tmp/ipykernel_2304/2682082711.py", line 43, in forward
+    feat2 = self.prelu(self.conv2(x))
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/conv.py", line 553, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+ß	
+conv2d_9
+val_16prelu_7node_prelu_7"PReluJ»
+	namespace∫: __main__.NexusNetEnhanced/body: torch.nn.modules.container.Sequential/body.2: __main__.DetailPreservingBlock/body.2.prelu: torch.nn.modules.activation.PReLU/prelu_7: aten.prelu.defaultJ∆
+pkg.torch.onnx.class_hierarchy£['__main__.NexusNetEnhanced', 'torch.nn.modules.container.Sequential', '__main__.DetailPreservingBlock', 'torch.nn.modules.activation.PReLU', 'aten.prelu.default']J°
+pkg.torch.onnx.fx_nodeÜ%prelu_7 : [num_users=1] = call_function[target=torch.ops.aten.prelu.default](args = (%conv2d_9, %p_body_2_prelu_weight), kwargs = {})JO
+pkg.torch.onnx.name_scopes1['', 'body', 'body.2', 'body.2.prelu', 'prelu_7']JÎ
+pkg.torch.onnx.stack_traceÃFile "/tmp/ipykernel_2304/2682082711.py", line 133, in forward
+    feat = self.body(feat)
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/tmp/ipykernel_2304/2682082711.py", line 43, in forward
+    feat2 = self.prelu(self.conv2(x))
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/activation.py", line 1641, in forward
+    return F.prelu(input, self.weight)
+Æ
+prelu_6
+prelu_7cat_2
+node_cat_2"Concat*
+axis†Jî
+	namespaceÜ: __main__.NexusNetEnhanced/body: torch.nn.modules.container.Sequential/body.2: __main__.DetailPreservingBlock/cat_2: aten.cat.defaultJû
+pkg.torch.onnx.class_hierarchy|['__main__.NexusNetEnhanced', 'torch.nn.modules.container.Sequential', '__main__.DetailPreservingBlock', 'aten.cat.default']Jí
+pkg.torch.onnx.fx_nodex%cat_2 : [num_users=1] = call_function[target=torch.ops.aten.cat.default](args = ([%prelu_6, %prelu_7], 1), kwargs = {})J=
+pkg.torch.onnx.name_scopes['', 'body', 'body.2', 'cat_2']JÂ
+pkg.torch.onnx.stack_trace∆File "/tmp/ipykernel_2304/2682082711.py", line 133, in forward
+    feat = self.body(feat)
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/tmp/ipykernel_2304/2682082711.py", line 45, in forward
+    concat = torch.cat([feat1, feat2], dim=1)
+∏
+
+cat_2
+body.2.fuse.weight
+body.2.fuse.bias	conv2d_10node_conv2d_10"Conv*
+group†*
+pads@ @ @ @ †*
+auto_pad"NOTSET†*
+strides@@†*
+	dilations@@†J≈
+	namespace∑: __main__.NexusNetEnhanced/body: torch.nn.modules.container.Sequential/body.2: __main__.DetailPreservingBlock/body.2.fuse: torch.nn.modules.conv.Conv2d/conv2d_10: aten.conv2d.defaultJ¬
+pkg.torch.onnx.class_hierarchyü['__main__.NexusNetEnhanced', 'torch.nn.modules.container.Sequential', '__main__.DetailPreservingBlock', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']Jµ
+pkg.torch.onnx.fx_nodeö%conv2d_10 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%cat_2, %p_body_2_fuse_weight, %p_body_2_fuse_bias), kwargs = {})JP
+pkg.torch.onnx.name_scopes2['', 'body', 'body.2', 'body.2.fuse', 'conv2d_10']JÚ
+pkg.torch.onnx.stack_trace”File "/tmp/ipykernel_2304/2682082711.py", line 133, in forward
+    feat = self.body(feat)
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/tmp/ipykernel_2304/2682082711.py", line 47, in forward
+    fused = self.fuse(concat)
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/conv.py", line 553, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+â
+add_86
+	conv2d_10add_122node_add_122"AddJï
+	namespaceá: __main__.NexusNetEnhanced/body: torch.nn.modules.container.Sequential/body.2: __main__.DetailPreservingBlock/add_122: aten.add.TensorJù
+pkg.torch.onnx.class_hierarchy{['__main__.NexusNetEnhanced', 'torch.nn.modules.container.Sequential', '__main__.DetailPreservingBlock', 'aten.add.Tensor']Jè
+pkg.torch.onnx.fx_nodeu%add_122 : [num_users=3] = call_function[target=torch.ops.aten.add.Tensor](args = (%add_86, %conv2d_10), kwargs = {})J?
+pkg.torch.onnx.name_scopes!['', 'body', 'body.2', 'add_122']JÃ
+pkg.torch.onnx.stack_trace≠File "/tmp/ipykernel_2304/2682082711.py", line 133, in forward
+    feat = self.body(feat)
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/tmp/ipykernel_2304/2682082711.py", line 48, in forward
+    return x + fused
+⁄
+
+add_122
+body.3.conv1.weight
+body.3.conv1.bias	conv2d_11node_conv2d_11"Conv*
 group†*
 pads@@@@†*
 auto_pad"NOTSET†*
 strides@@†*
 	dilations@@†J∆
-	namespace∏: __main__.NexusNetBalanced/body: torch.nn.modules.container.Sequential/body.1: __main__.EfficientResidualBlock/body.1.conv2: torch.nn.modules.conv.Conv2d/conv2d_7: aten.conv2d.defaultJ√
-pkg.torch.onnx.class_hierarchy†['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', '__main__.EfficientResidualBlock', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J»
-pkg.torch.onnx.fx_node≠%conv2d_7 : [num_users=2] = call_function[target=torch.ops.aten.conv2d.default](args = (%prelu_4, %p_body_1_conv2_weight, %p_body_1_conv2_bias, [1, 1], [1, 1]), kwargs = {})JP
-pkg.torch.onnx.name_scopes2['', 'body', 'body.1', 'body.1.conv2', 'conv2d_7']J¯
-pkg.torch.onnx.stack_traceŸFile "/tmp/ipykernel_2939/3071178374.py", line 100, in forward
+	namespace∏: __main__.NexusNetEnhanced/body: torch.nn.modules.container.Sequential/body.3: __main__.DetailPreservingBlock/body.3.conv1: torch.nn.modules.conv.Conv2d/conv2d_11: aten.conv2d.defaultJ¬
+pkg.torch.onnx.class_hierarchyü['__main__.NexusNetEnhanced', 'torch.nn.modules.container.Sequential', '__main__.DetailPreservingBlock', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J…
+pkg.torch.onnx.fx_nodeÆ%conv2d_11 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%add_122, %p_body_3_conv1_weight, %p_body_3_conv1_bias, [1, 1], [1, 1]), kwargs = {})JQ
+pkg.torch.onnx.name_scopes3['', 'body', 'body.3', 'body.3.conv1', 'conv2d_11']J˙
+pkg.torch.onnx.stack_trace€File "/tmp/ipykernel_2304/2682082711.py", line 133, in forward
     feat = self.body(feat)
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/tmp/ipykernel_2939/3071178374.py", line 54, in forward
-    residual = self.conv2(residual)
+  File "/tmp/ipykernel_2304/2682082711.py", line 42, in forward
+    feat1 = self.prelu(self.conv1(x))
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/conv.py", line 553, in forward
     return self._conv_forward(input, self.weight, self.bias)
-‰
-conv2d_7
-val_20mean_1node_mean_1"
-ReduceMean*
-noop_with_empty_axes †*
-keepdims†Jä
-	namespace¸: __main__.NexusNetBalanced/body: torch.nn.modules.container.Sequential/body.1: __main__.EfficientResidualBlock/body.1.attention: torch.nn.modules.container.Sequential/body.1.attention.0: torch.nn.modules.pooling.AdaptiveAvgPool2d/mean_1: aten.mean.dimJÙ
-pkg.torch.onnx.class_hierarchy—['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', '__main__.EfficientResidualBlock', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.pooling.AdaptiveAvgPool2d', 'aten.mean.dim']Jí
-pkg.torch.onnx.fx_nodex%mean_1 : [num_users=1] = call_function[target=torch.ops.aten.mean.dim](args = (%conv2d_7, [-1, -2], True), kwargs = {})Jh
-pkg.torch.onnx.name_scopesJ['', 'body', 'body.1', 'body.1.attention', 'body.1.attention.0', 'mean_1']J˝
-pkg.torch.onnx.stack_traceﬁFile "/tmp/ipykernel_2939/3071178374.py", line 100, in forward
+©	
+	conv2d_11
+val_18prelu_8node_prelu_8"PReluJ»
+	namespace∫: __main__.NexusNetEnhanced/body: torch.nn.modules.container.Sequential/body.3: __main__.DetailPreservingBlock/body.3.prelu: torch.nn.modules.activation.PReLU/prelu_8: aten.prelu.defaultJ∆
+pkg.torch.onnx.class_hierarchy£['__main__.NexusNetEnhanced', 'torch.nn.modules.container.Sequential', '__main__.DetailPreservingBlock', 'torch.nn.modules.activation.PReLU', 'aten.prelu.default']J¢
+pkg.torch.onnx.fx_nodeá%prelu_8 : [num_users=1] = call_function[target=torch.ops.aten.prelu.default](args = (%conv2d_11, %p_body_3_prelu_weight), kwargs = {})JO
+pkg.torch.onnx.name_scopes1['', 'body', 'body.3', 'body.3.prelu', 'prelu_8']JÎ
+pkg.torch.onnx.stack_traceÃFile "/tmp/ipykernel_2304/2682082711.py", line 133, in forward
     feat = self.body(feat)
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
-  File "/tmp/ipykernel_2939/3071178374.py", line 55, in forward
-    attention = self.attention(residual)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/pooling.py", line 1510, in forward
-    return F.adaptive_avg_pool2d(input, self.output_size)
-‡
-mean_1
-body.1.attention.1.weight
-body.1.attention.1.biasconv2d_8node_conv2d_8"Conv*
-group†*
-pads@ @ @ @ †*
-auto_pad"NOTSET†*
-strides@@†*
-	dilations@@†JÑ
-	namespaceˆ: __main__.NexusNetBalanced/body: torch.nn.modules.container.Sequential/body.1: __main__.EfficientResidualBlock/body.1.attention: torch.nn.modules.container.Sequential/body.1.attention.1: torch.nn.modules.conv.Conv2d/conv2d_8: aten.conv2d.defaultJÏ
-pkg.torch.onnx.class_hierarchy…['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', '__main__.EfficientResidualBlock', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J√
-pkg.torch.onnx.fx_node®%conv2d_8 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%mean_1, %p_body_1_attention_1_weight, %p_body_1_attention_1_bias), kwargs = {})Jj
-pkg.torch.onnx.name_scopesL['', 'body', 'body.1', 'body.1.attention', 'body.1.attention.1', 'conv2d_8']J¸
-pkg.torch.onnx.stack_trace›File "/tmp/ipykernel_2939/3071178374.py", line 100, in forward
-    feat = self.body(feat)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/tmp/ipykernel_2939/3071178374.py", line 55, in forward
-    attention = self.attention(residual)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/conv.py", line 553, in forward
-    return self._conv_forward(input, self.weight, self.bias)
-≤
-conv2d_8
-val_25prelu_5node_prelu_5"PReluJá
-	namespace˘: __main__.NexusNetBalanced/body: torch.nn.modules.container.Sequential/body.1: __main__.EfficientResidualBlock/body.1.attention: torch.nn.modules.container.Sequential/body.1.attention.2: torch.nn.modules.activation.PReLU/prelu_5: aten.prelu.defaultJ
-pkg.torch.onnx.class_hierarchyÕ['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', '__main__.EfficientResidualBlock', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.PReLU', 'aten.prelu.default']Jß
-pkg.torch.onnx.fx_nodeå%prelu_5 : [num_users=1] = call_function[target=torch.ops.aten.prelu.default](args = (%conv2d_8, %p_body_1_attention_2_weight), kwargs = {})Ji
-pkg.torch.onnx.name_scopesK['', 'body', 'body.1', 'body.1.attention', 'body.1.attention.2', 'prelu_5']JÌ
-pkg.torch.onnx.stack_traceŒFile "/tmp/ipykernel_2939/3071178374.py", line 100, in forward
-    feat = self.body(feat)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/tmp/ipykernel_2939/3071178374.py", line 55, in forward
-    attention = self.attention(residual)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/activation.py", line 1641, in forward
-    return F.prelu(input, self.weight)
-‚
-prelu_5
-body.1.attention.3.weight
-body.1.attention.3.biasconv2d_9node_conv2d_9"Conv*
-group†*
-pads@ @ @ @ †*
-auto_pad"NOTSET†*
-strides@@†*
-	dilations@@†JÑ
-	namespaceˆ: __main__.NexusNetBalanced/body: torch.nn.modules.container.Sequential/body.1: __main__.EfficientResidualBlock/body.1.attention: torch.nn.modules.container.Sequential/body.1.attention.3: torch.nn.modules.conv.Conv2d/conv2d_9: aten.conv2d.defaultJÏ
-pkg.torch.onnx.class_hierarchy…['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', '__main__.EfficientResidualBlock', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']Jƒ
-pkg.torch.onnx.fx_node©%conv2d_9 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%prelu_5, %p_body_1_attention_3_weight, %p_body_1_attention_3_bias), kwargs = {})Jj
-pkg.torch.onnx.name_scopesL['', 'body', 'body.1', 'body.1.attention', 'body.1.attention.3', 'conv2d_9']J¸
-pkg.torch.onnx.stack_trace›File "/tmp/ipykernel_2939/3071178374.py", line 100, in forward
-    feat = self.body(feat)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/tmp/ipykernel_2939/3071178374.py", line 55, in forward
-    attention = self.attention(residual)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/conv.py", line 553, in forward
-    return self._conv_forward(input, self.weight, self.bias)
-ö
-conv2d_9	sigmoid_1node_sigmoid_1"SigmoidJç
-	namespaceˇ: __main__.NexusNetBalanced/body: torch.nn.modules.container.Sequential/body.1: __main__.EfficientResidualBlock/body.1.attention: torch.nn.modules.container.Sequential/body.1.attention.4: torch.nn.modules.activation.Sigmoid/sigmoid_1: aten.sigmoid.defaultJÙ
-pkg.torch.onnx.class_hierarchy—['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', '__main__.EfficientResidualBlock', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.Sigmoid', 'aten.sigmoid.default']Jç
-pkg.torch.onnx.fx_nodes%sigmoid_1 : [num_users=1] = call_function[target=torch.ops.aten.sigmoid.default](args = (%conv2d_9,), kwargs = {})Jk
-pkg.torch.onnx.name_scopesM['', 'body', 'body.1', 'body.1.attention', 'body.1.attention.4', 'sigmoid_1']JÂ
-pkg.torch.onnx.stack_trace∆File "/tmp/ipykernel_2939/3071178374.py", line 100, in forward
-    feat = self.body(feat)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/tmp/ipykernel_2939/3071178374.py", line 55, in forward
-    attention = self.attention(residual)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/activation.py", line 358, in forward
-    return torch.sigmoid(input)
-ô
-conv2d_7
-	sigmoid_1mul_89node_mul_89"MulJï
-	namespaceá: __main__.NexusNetBalanced/body: torch.nn.modules.container.Sequential/body.1: __main__.EfficientResidualBlock/mul_89: aten.mul.TensorJû
-pkg.torch.onnx.class_hierarchy|['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', '__main__.EfficientResidualBlock', 'aten.mul.Tensor']Jê
-pkg.torch.onnx.fx_nodev%mul_89 : [num_users=1] = call_function[target=torch.ops.aten.mul.Tensor](args = (%conv2d_7, %sigmoid_1), kwargs = {})J>
-pkg.torch.onnx.name_scopes ['', 'body', 'body.1', 'mul_89']J€
-pkg.torch.onnx.stack_traceºFile "/tmp/ipykernel_2939/3071178374.py", line 100, in forward
-    feat = self.body(feat)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/tmp/ipykernel_2939/3071178374.py", line 56, in forward
-    residual = residual * attention
-à
-add_67
-mul_89add_118node_add_118"AddJñ
-	namespaceà: __main__.NexusNetBalanced/body: torch.nn.modules.container.Sequential/body.1: __main__.EfficientResidualBlock/add_118: aten.add.TensorJû
-pkg.torch.onnx.class_hierarchy|['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', '__main__.EfficientResidualBlock', 'aten.add.Tensor']Jå
-pkg.torch.onnx.fx_noder%add_118 : [num_users=2] = call_function[target=torch.ops.aten.add.Tensor](args = (%add_67, %mul_89), kwargs = {})J?
-pkg.torch.onnx.name_scopes!['', 'body', 'body.1', 'add_118']Jœ
-pkg.torch.onnx.stack_trace∞File "/tmp/ipykernel_2939/3071178374.py", line 100, in forward
-    feat = self.body(feat)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/tmp/ipykernel_2939/3071178374.py", line 57, in forward
-    return x + residual
-”
-
-add_118
-body.2.conv1.weight
-body.2.conv1.bias	conv2d_10node_conv2d_10"Conv*
-group†*
-pads@@@@†*
-auto_pad"NOTSET†*
-strides@@†*
-	dilations@@†J«
-	namespaceπ: __main__.NexusNetBalanced/body: torch.nn.modules.container.Sequential/body.2: __main__.EfficientResidualBlock/body.2.conv1: torch.nn.modules.conv.Conv2d/conv2d_10: aten.conv2d.defaultJ√
-pkg.torch.onnx.class_hierarchy†['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', '__main__.EfficientResidualBlock', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J…
-pkg.torch.onnx.fx_nodeÆ%conv2d_10 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%add_118, %p_body_2_conv1_weight, %p_body_2_conv1_bias, [1, 1], [1, 1]), kwargs = {})JQ
-pkg.torch.onnx.name_scopes3['', 'body', 'body.2', 'body.2.conv1', 'conv2d_10']JÒ
-pkg.torch.onnx.stack_trace“File "/tmp/ipykernel_2939/3071178374.py", line 100, in forward
-    feat = self.body(feat)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/tmp/ipykernel_2939/3071178374.py", line 52, in forward
-    residual = self.conv1(x)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/conv.py", line 553, in forward
-    return self._conv_forward(input, self.weight, self.bias)
-≠	
-	conv2d_10
-val_26prelu_6node_prelu_6"PReluJ 
-	namespaceº: __main__.NexusNetBalanced/body: torch.nn.modules.container.Sequential/body.2: __main__.EfficientResidualBlock/body.2.prelu1: torch.nn.modules.activation.PReLU/prelu_6: aten.prelu.defaultJ«
-pkg.torch.onnx.class_hierarchy§['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', '__main__.EfficientResidualBlock', 'torch.nn.modules.activation.PReLU', 'aten.prelu.default']J£
-pkg.torch.onnx.fx_nodeà%prelu_6 : [num_users=1] = call_function[target=torch.ops.aten.prelu.default](args = (%conv2d_10, %p_body_2_prelu1_weight), kwargs = {})JP
-pkg.torch.onnx.name_scopes2['', 'body', 'body.2', 'body.2.prelu1', 'prelu_6']JÍ
-pkg.torch.onnx.stack_traceÀFile "/tmp/ipykernel_2939/3071178374.py", line 100, in forward
-    feat = self.body(feat)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/tmp/ipykernel_2939/3071178374.py", line 53, in forward
-    residual = self.prelu1(residual)
+  File "/tmp/ipykernel_2304/2682082711.py", line 42, in forward
+    feat1 = self.prelu(self.conv1(x))
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/activation.py", line 1641, in forward
     return F.prelu(input, self.weight)
 ⁄
 
-prelu_6
-body.2.conv2.weight
-body.2.conv2.bias	conv2d_11node_conv2d_11"Conv*
-group†*
-pads@@@@†*
-auto_pad"NOTSET†*
-strides@@†*
-	dilations@@†J«
-	namespaceπ: __main__.NexusNetBalanced/body: torch.nn.modules.container.Sequential/body.2: __main__.EfficientResidualBlock/body.2.conv2: torch.nn.modules.conv.Conv2d/conv2d_11: aten.conv2d.defaultJ√
-pkg.torch.onnx.class_hierarchy†['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', '__main__.EfficientResidualBlock', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J…
-pkg.torch.onnx.fx_nodeÆ%conv2d_11 : [num_users=2] = call_function[target=torch.ops.aten.conv2d.default](args = (%prelu_6, %p_body_2_conv2_weight, %p_body_2_conv2_bias, [1, 1], [1, 1]), kwargs = {})JQ
-pkg.torch.onnx.name_scopes3['', 'body', 'body.2', 'body.2.conv2', 'conv2d_11']J¯
-pkg.torch.onnx.stack_traceŸFile "/tmp/ipykernel_2939/3071178374.py", line 100, in forward
-    feat = self.body(feat)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/tmp/ipykernel_2939/3071178374.py", line 54, in forward
-    residual = self.conv2(residual)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/conv.py", line 553, in forward
-    return self._conv_forward(input, self.weight, self.bias)
-Ê
-	conv2d_11
-val_20mean_2node_mean_2"
-ReduceMean*
-noop_with_empty_axes †*
-keepdims†Jä
-	namespace¸: __main__.NexusNetBalanced/body: torch.nn.modules.container.Sequential/body.2: __main__.EfficientResidualBlock/body.2.attention: torch.nn.modules.container.Sequential/body.2.attention.0: torch.nn.modules.pooling.AdaptiveAvgPool2d/mean_2: aten.mean.dimJÙ
-pkg.torch.onnx.class_hierarchy—['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', '__main__.EfficientResidualBlock', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.pooling.AdaptiveAvgPool2d', 'aten.mean.dim']Jì
-pkg.torch.onnx.fx_nodey%mean_2 : [num_users=1] = call_function[target=torch.ops.aten.mean.dim](args = (%conv2d_11, [-1, -2], True), kwargs = {})Jh
-pkg.torch.onnx.name_scopesJ['', 'body', 'body.2', 'body.2.attention', 'body.2.attention.0', 'mean_2']J˝
-pkg.torch.onnx.stack_traceﬁFile "/tmp/ipykernel_2939/3071178374.py", line 100, in forward
-    feat = self.body(feat)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/tmp/ipykernel_2939/3071178374.py", line 55, in forward
-    attention = self.attention(residual)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/pooling.py", line 1510, in forward
-    return F.adaptive_avg_pool2d(input, self.output_size)
-Â
-mean_2
-body.2.attention.1.weight
-body.2.attention.1.bias	conv2d_12node_conv2d_12"Conv*
-group†*
-pads@ @ @ @ †*
-auto_pad"NOTSET†*
-strides@@†*
-	dilations@@†JÖ
-	namespace˜: __main__.NexusNetBalanced/body: torch.nn.modules.container.Sequential/body.2: __main__.EfficientResidualBlock/body.2.attention: torch.nn.modules.container.Sequential/body.2.attention.1: torch.nn.modules.conv.Conv2d/conv2d_12: aten.conv2d.defaultJÏ
-pkg.torch.onnx.class_hierarchy…['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', '__main__.EfficientResidualBlock', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']Jƒ
-pkg.torch.onnx.fx_node©%conv2d_12 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%mean_2, %p_body_2_attention_1_weight, %p_body_2_attention_1_bias), kwargs = {})Jk
-pkg.torch.onnx.name_scopesM['', 'body', 'body.2', 'body.2.attention', 'body.2.attention.1', 'conv2d_12']J¸
-pkg.torch.onnx.stack_trace›File "/tmp/ipykernel_2939/3071178374.py", line 100, in forward
-    feat = self.body(feat)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/tmp/ipykernel_2939/3071178374.py", line 55, in forward
-    attention = self.attention(residual)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/conv.py", line 553, in forward
-    return self._conv_forward(input, self.weight, self.bias)
-¥
-	conv2d_12
-val_29prelu_7node_prelu_7"PReluJá
-	namespace˘: __main__.NexusNetBalanced/body: torch.nn.modules.container.Sequential/body.2: __main__.EfficientResidualBlock/body.2.attention: torch.nn.modules.container.Sequential/body.2.attention.2: torch.nn.modules.activation.PReLU/prelu_7: aten.prelu.defaultJ
-pkg.torch.onnx.class_hierarchyÕ['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', '__main__.EfficientResidualBlock', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.PReLU', 'aten.prelu.default']J®
-pkg.torch.onnx.fx_nodeç%prelu_7 : [num_users=1] = call_function[target=torch.ops.aten.prelu.default](args = (%conv2d_12, %p_body_2_attention_2_weight), kwargs = {})Ji
-pkg.torch.onnx.name_scopesK['', 'body', 'body.2', 'body.2.attention', 'body.2.attention.2', 'prelu_7']JÌ
-pkg.torch.onnx.stack_traceŒFile "/tmp/ipykernel_2939/3071178374.py", line 100, in forward
-    feat = self.body(feat)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/tmp/ipykernel_2939/3071178374.py", line 55, in forward
-    attention = self.attention(residual)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/activation.py", line 1641, in forward
-    return F.prelu(input, self.weight)
-Á
-prelu_7
-body.2.attention.3.weight
-body.2.attention.3.bias	conv2d_13node_conv2d_13"Conv*
-group†*
-pads@ @ @ @ †*
-auto_pad"NOTSET†*
-strides@@†*
-	dilations@@†JÖ
-	namespace˜: __main__.NexusNetBalanced/body: torch.nn.modules.container.Sequential/body.2: __main__.EfficientResidualBlock/body.2.attention: torch.nn.modules.container.Sequential/body.2.attention.3: torch.nn.modules.conv.Conv2d/conv2d_13: aten.conv2d.defaultJÏ
-pkg.torch.onnx.class_hierarchy…['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', '__main__.EfficientResidualBlock', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J≈
-pkg.torch.onnx.fx_node™%conv2d_13 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%prelu_7, %p_body_2_attention_3_weight, %p_body_2_attention_3_bias), kwargs = {})Jk
-pkg.torch.onnx.name_scopesM['', 'body', 'body.2', 'body.2.attention', 'body.2.attention.3', 'conv2d_13']J¸
-pkg.torch.onnx.stack_trace›File "/tmp/ipykernel_2939/3071178374.py", line 100, in forward
-    feat = self.body(feat)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/tmp/ipykernel_2939/3071178374.py", line 55, in forward
-    attention = self.attention(residual)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/conv.py", line 553, in forward
-    return self._conv_forward(input, self.weight, self.bias)
-ú
-	conv2d_13	sigmoid_2node_sigmoid_2"SigmoidJç
-	namespaceˇ: __main__.NexusNetBalanced/body: torch.nn.modules.container.Sequential/body.2: __main__.EfficientResidualBlock/body.2.attention: torch.nn.modules.container.Sequential/body.2.attention.4: torch.nn.modules.activation.Sigmoid/sigmoid_2: aten.sigmoid.defaultJÙ
-pkg.torch.onnx.class_hierarchy—['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', '__main__.EfficientResidualBlock', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.Sigmoid', 'aten.sigmoid.default']Jé
-pkg.torch.onnx.fx_nodet%sigmoid_2 : [num_users=1] = call_function[target=torch.ops.aten.sigmoid.default](args = (%conv2d_13,), kwargs = {})Jk
-pkg.torch.onnx.name_scopesM['', 'body', 'body.2', 'body.2.attention', 'body.2.attention.4', 'sigmoid_2']JÂ
-pkg.torch.onnx.stack_trace∆File "/tmp/ipykernel_2939/3071178374.py", line 100, in forward
-    feat = self.body(feat)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/tmp/ipykernel_2939/3071178374.py", line 55, in forward
-    attention = self.attention(residual)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/activation.py", line 358, in forward
-    return torch.sigmoid(input)
-†
-	conv2d_11
-	sigmoid_2mul_121node_mul_121"MulJñ
-	namespaceà: __main__.NexusNetBalanced/body: torch.nn.modules.container.Sequential/body.2: __main__.EfficientResidualBlock/mul_121: aten.mul.TensorJû
-pkg.torch.onnx.class_hierarchy|['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', '__main__.EfficientResidualBlock', 'aten.mul.Tensor']Jí
-pkg.torch.onnx.fx_nodex%mul_121 : [num_users=1] = call_function[target=torch.ops.aten.mul.Tensor](args = (%conv2d_11, %sigmoid_2), kwargs = {})J?
-pkg.torch.onnx.name_scopes!['', 'body', 'body.2', 'mul_121']J€
-pkg.torch.onnx.stack_traceºFile "/tmp/ipykernel_2939/3071178374.py", line 100, in forward
-    feat = self.body(feat)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/tmp/ipykernel_2939/3071178374.py", line 56, in forward
-    residual = residual * attention
-å
-add_118
-mul_121add_169node_add_169"AddJñ
-	namespaceà: __main__.NexusNetBalanced/body: torch.nn.modules.container.Sequential/body.2: __main__.EfficientResidualBlock/add_169: aten.add.TensorJû
-pkg.torch.onnx.class_hierarchy|['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', '__main__.EfficientResidualBlock', 'aten.add.Tensor']Jé
-pkg.torch.onnx.fx_nodet%add_169 : [num_users=2] = call_function[target=torch.ops.aten.add.Tensor](args = (%add_118, %mul_121), kwargs = {})J?
-pkg.torch.onnx.name_scopes!['', 'body', 'body.2', 'add_169']Jœ
-pkg.torch.onnx.stack_trace∞File "/tmp/ipykernel_2939/3071178374.py", line 100, in forward
-    feat = self.body(feat)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/tmp/ipykernel_2939/3071178374.py", line 57, in forward
-    return x + residual
-”
-
-add_169
-body.3.conv1.weight
-body.3.conv1.bias	conv2d_14node_conv2d_14"Conv*
-group†*
-pads@@@@†*
-auto_pad"NOTSET†*
-strides@@†*
-	dilations@@†J«
-	namespaceπ: __main__.NexusNetBalanced/body: torch.nn.modules.container.Sequential/body.3: __main__.EfficientResidualBlock/body.3.conv1: torch.nn.modules.conv.Conv2d/conv2d_14: aten.conv2d.defaultJ√
-pkg.torch.onnx.class_hierarchy†['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', '__main__.EfficientResidualBlock', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J…
-pkg.torch.onnx.fx_nodeÆ%conv2d_14 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%add_169, %p_body_3_conv1_weight, %p_body_3_conv1_bias, [1, 1], [1, 1]), kwargs = {})JQ
-pkg.torch.onnx.name_scopes3['', 'body', 'body.3', 'body.3.conv1', 'conv2d_14']JÒ
-pkg.torch.onnx.stack_trace“File "/tmp/ipykernel_2939/3071178374.py", line 100, in forward
-    feat = self.body(feat)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/tmp/ipykernel_2939/3071178374.py", line 52, in forward
-    residual = self.conv1(x)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/conv.py", line 553, in forward
-    return self._conv_forward(input, self.weight, self.bias)
-≠	
-	conv2d_14
-val_30prelu_8node_prelu_8"PReluJ 
-	namespaceº: __main__.NexusNetBalanced/body: torch.nn.modules.container.Sequential/body.3: __main__.EfficientResidualBlock/body.3.prelu1: torch.nn.modules.activation.PReLU/prelu_8: aten.prelu.defaultJ«
-pkg.torch.onnx.class_hierarchy§['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', '__main__.EfficientResidualBlock', 'torch.nn.modules.activation.PReLU', 'aten.prelu.default']J£
-pkg.torch.onnx.fx_nodeà%prelu_8 : [num_users=1] = call_function[target=torch.ops.aten.prelu.default](args = (%conv2d_14, %p_body_3_prelu1_weight), kwargs = {})JP
-pkg.torch.onnx.name_scopes2['', 'body', 'body.3', 'body.3.prelu1', 'prelu_8']JÍ
-pkg.torch.onnx.stack_traceÀFile "/tmp/ipykernel_2939/3071178374.py", line 100, in forward
-    feat = self.body(feat)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/tmp/ipykernel_2939/3071178374.py", line 53, in forward
-    residual = self.prelu1(residual)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/activation.py", line 1641, in forward
-    return F.prelu(input, self.weight)
-⁄
-
-prelu_8
+add_122
 body.3.conv2.weight
-body.3.conv2.bias	conv2d_15node_conv2d_15"Conv*
+body.3.conv2.bias	conv2d_12node_conv2d_12"Conv*
+group†*
+pads@@@@†*
+auto_pad"NOTSET†*
+strides@@†*
+	dilations@@†J∆
+	namespace∏: __main__.NexusNetEnhanced/body: torch.nn.modules.container.Sequential/body.3: __main__.DetailPreservingBlock/body.3.conv2: torch.nn.modules.conv.Conv2d/conv2d_12: aten.conv2d.defaultJ¬
+pkg.torch.onnx.class_hierarchyü['__main__.NexusNetEnhanced', 'torch.nn.modules.container.Sequential', '__main__.DetailPreservingBlock', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J…
+pkg.torch.onnx.fx_nodeÆ%conv2d_12 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%add_122, %p_body_3_conv2_weight, %p_body_3_conv2_bias, [1, 1], [2, 2]), kwargs = {})JQ
+pkg.torch.onnx.name_scopes3['', 'body', 'body.3', 'body.3.conv2', 'conv2d_12']J˙
+pkg.torch.onnx.stack_trace€File "/tmp/ipykernel_2304/2682082711.py", line 133, in forward
+    feat = self.body(feat)
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/tmp/ipykernel_2304/2682082711.py", line 43, in forward
+    feat2 = self.prelu(self.conv2(x))
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/conv.py", line 553, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+©	
+	conv2d_12
+val_18prelu_9node_prelu_9"PReluJ»
+	namespace∫: __main__.NexusNetEnhanced/body: torch.nn.modules.container.Sequential/body.3: __main__.DetailPreservingBlock/body.3.prelu: torch.nn.modules.activation.PReLU/prelu_9: aten.prelu.defaultJ∆
+pkg.torch.onnx.class_hierarchy£['__main__.NexusNetEnhanced', 'torch.nn.modules.container.Sequential', '__main__.DetailPreservingBlock', 'torch.nn.modules.activation.PReLU', 'aten.prelu.default']J¢
+pkg.torch.onnx.fx_nodeá%prelu_9 : [num_users=1] = call_function[target=torch.ops.aten.prelu.default](args = (%conv2d_12, %p_body_3_prelu_weight), kwargs = {})JO
+pkg.torch.onnx.name_scopes1['', 'body', 'body.3', 'body.3.prelu', 'prelu_9']JÎ
+pkg.torch.onnx.stack_traceÃFile "/tmp/ipykernel_2304/2682082711.py", line 133, in forward
+    feat = self.body(feat)
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/tmp/ipykernel_2304/2682082711.py", line 43, in forward
+    feat2 = self.prelu(self.conv2(x))
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/activation.py", line 1641, in forward
+    return F.prelu(input, self.weight)
+Æ
+prelu_8
+prelu_9cat_3
+node_cat_3"Concat*
+axis†Jî
+	namespaceÜ: __main__.NexusNetEnhanced/body: torch.nn.modules.container.Sequential/body.3: __main__.DetailPreservingBlock/cat_3: aten.cat.defaultJû
+pkg.torch.onnx.class_hierarchy|['__main__.NexusNetEnhanced', 'torch.nn.modules.container.Sequential', '__main__.DetailPreservingBlock', 'aten.cat.default']Jí
+pkg.torch.onnx.fx_nodex%cat_3 : [num_users=1] = call_function[target=torch.ops.aten.cat.default](args = ([%prelu_8, %prelu_9], 1), kwargs = {})J=
+pkg.torch.onnx.name_scopes['', 'body', 'body.3', 'cat_3']JÂ
+pkg.torch.onnx.stack_trace∆File "/tmp/ipykernel_2304/2682082711.py", line 133, in forward
+    feat = self.body(feat)
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/tmp/ipykernel_2304/2682082711.py", line 45, in forward
+    concat = torch.cat([feat1, feat2], dim=1)
+∏
+
+cat_3
+body.3.fuse.weight
+body.3.fuse.bias	conv2d_13node_conv2d_13"Conv*
+group†*
+pads@ @ @ @ †*
+auto_pad"NOTSET†*
+strides@@†*
+	dilations@@†J≈
+	namespace∑: __main__.NexusNetEnhanced/body: torch.nn.modules.container.Sequential/body.3: __main__.DetailPreservingBlock/body.3.fuse: torch.nn.modules.conv.Conv2d/conv2d_13: aten.conv2d.defaultJ¬
+pkg.torch.onnx.class_hierarchyü['__main__.NexusNetEnhanced', 'torch.nn.modules.container.Sequential', '__main__.DetailPreservingBlock', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']Jµ
+pkg.torch.onnx.fx_nodeö%conv2d_13 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%cat_3, %p_body_3_fuse_weight, %p_body_3_fuse_bias), kwargs = {})JP
+pkg.torch.onnx.name_scopes2['', 'body', 'body.3', 'body.3.fuse', 'conv2d_13']JÚ
+pkg.torch.onnx.stack_trace”File "/tmp/ipykernel_2304/2682082711.py", line 133, in forward
+    feat = self.body(feat)
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/tmp/ipykernel_2304/2682082711.py", line 47, in forward
+    fused = self.fuse(concat)
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/conv.py", line 553, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+ã
+add_122
+	conv2d_13add_158node_add_158"AddJï
+	namespaceá: __main__.NexusNetEnhanced/body: torch.nn.modules.container.Sequential/body.3: __main__.DetailPreservingBlock/add_158: aten.add.TensorJù
+pkg.torch.onnx.class_hierarchy{['__main__.NexusNetEnhanced', 'torch.nn.modules.container.Sequential', '__main__.DetailPreservingBlock', 'aten.add.Tensor']Jê
+pkg.torch.onnx.fx_nodev%add_158 : [num_users=2] = call_function[target=torch.ops.aten.add.Tensor](args = (%add_122, %conv2d_13), kwargs = {})J?
+pkg.torch.onnx.name_scopes!['', 'body', 'body.3', 'add_158']JÃ
+pkg.torch.onnx.stack_trace≠File "/tmp/ipykernel_2304/2682082711.py", line 133, in forward
+    feat = self.body(feat)
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/tmp/ipykernel_2304/2682082711.py", line 48, in forward
+    return x + fused
+¬
+add_158
+residual.weight
+residual.bias	conv2d_14node_conv2d_14"Conv*
+group†*
+pads@ @ @ @ †*
+auto_pad"NOTSET†*
+strides@@†*
+	dilations@@†Jn
+	namespacea: __main__.NexusNetEnhanced/residual: torch.nn.modules.conv.Conv2d/conv2d_14: aten.conv2d.defaultJv
+pkg.torch.onnx.class_hierarchyT['__main__.NexusNetEnhanced', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J±
+pkg.torch.onnx.fx_nodeñ%conv2d_14 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%add_158, %p_residual_weight, %p_residual_bias), kwargs = {})J;
+pkg.torch.onnx.name_scopes['', 'residual', 'conv2d_14']Jæ
+pkg.torch.onnx.stack_traceüFile "/tmp/ipykernel_2304/2682082711.py", line 134, in forward
+    feat = feat + self.residual(feat)  # Strong residual connection
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/conv.py", line 553, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+≠
+add_158
+	conv2d_14add_169node_add_169"AddJA
+	namespace4: __main__.NexusNetEnhanced/add_169: aten.add.TensorJR
+pkg.torch.onnx.class_hierarchy0['__main__.NexusNetEnhanced', 'aten.add.Tensor']Jê
+pkg.torch.onnx.fx_nodev%add_169 : [num_users=1] = call_function[target=torch.ops.aten.add.Tensor](args = (%add_158, %conv2d_14), kwargs = {})J-
+pkg.torch.onnx.name_scopes['', 'add_169']J°
+pkg.torch.onnx.stack_traceÇFile "/tmp/ipykernel_2304/2682082711.py", line 134, in forward
+    feat = feat + self.residual(feat)  # Strong residual connection
+—
+
+add_169
+upscale.up1.0.weight
+upscale.up1.0.bias	conv2d_15node_conv2d_15"Conv*
 group†*
 pads@@@@†*
 auto_pad"NOTSET†*
 strides@@†*
 	dilations@@†J«
-	namespaceπ: __main__.NexusNetBalanced/body: torch.nn.modules.container.Sequential/body.3: __main__.EfficientResidualBlock/body.3.conv2: torch.nn.modules.conv.Conv2d/conv2d_15: aten.conv2d.defaultJ√
-pkg.torch.onnx.class_hierarchy†['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', '__main__.EfficientResidualBlock', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J…
-pkg.torch.onnx.fx_nodeÆ%conv2d_15 : [num_users=2] = call_function[target=torch.ops.aten.conv2d.default](args = (%prelu_8, %p_body_3_conv2_weight, %p_body_3_conv2_bias, [1, 1], [1, 1]), kwargs = {})JQ
-pkg.torch.onnx.name_scopes3['', 'body', 'body.3', 'body.3.conv2', 'conv2d_15']J¯
-pkg.torch.onnx.stack_traceŸFile "/tmp/ipykernel_2939/3071178374.py", line 100, in forward
-    feat = self.body(feat)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/tmp/ipykernel_2939/3071178374.py", line 54, in forward
-    residual = self.conv2(residual)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/conv.py", line 553, in forward
-    return self._conv_forward(input, self.weight, self.bias)
-Ê
-	conv2d_15
-val_20mean_3node_mean_3"
-ReduceMean*
-noop_with_empty_axes †*
-keepdims†Jä
-	namespace¸: __main__.NexusNetBalanced/body: torch.nn.modules.container.Sequential/body.3: __main__.EfficientResidualBlock/body.3.attention: torch.nn.modules.container.Sequential/body.3.attention.0: torch.nn.modules.pooling.AdaptiveAvgPool2d/mean_3: aten.mean.dimJÙ
-pkg.torch.onnx.class_hierarchy—['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', '__main__.EfficientResidualBlock', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.pooling.AdaptiveAvgPool2d', 'aten.mean.dim']Jì
-pkg.torch.onnx.fx_nodey%mean_3 : [num_users=1] = call_function[target=torch.ops.aten.mean.dim](args = (%conv2d_15, [-1, -2], True), kwargs = {})Jh
-pkg.torch.onnx.name_scopesJ['', 'body', 'body.3', 'body.3.attention', 'body.3.attention.0', 'mean_3']J˝
-pkg.torch.onnx.stack_traceﬁFile "/tmp/ipykernel_2939/3071178374.py", line 100, in forward
-    feat = self.body(feat)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/tmp/ipykernel_2939/3071178374.py", line 55, in forward
-    attention = self.attention(residual)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/pooling.py", line 1510, in forward
-    return F.adaptive_avg_pool2d(input, self.output_size)
-Â
-mean_3
-body.3.attention.1.weight
-body.3.attention.1.bias	conv2d_16node_conv2d_16"Conv*
-group†*
-pads@ @ @ @ †*
-auto_pad"NOTSET†*
-strides@@†*
-	dilations@@†JÖ
-	namespace˜: __main__.NexusNetBalanced/body: torch.nn.modules.container.Sequential/body.3: __main__.EfficientResidualBlock/body.3.attention: torch.nn.modules.container.Sequential/body.3.attention.1: torch.nn.modules.conv.Conv2d/conv2d_16: aten.conv2d.defaultJÏ
-pkg.torch.onnx.class_hierarchy…['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', '__main__.EfficientResidualBlock', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']Jƒ
-pkg.torch.onnx.fx_node©%conv2d_16 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%mean_3, %p_body_3_attention_1_weight, %p_body_3_attention_1_bias), kwargs = {})Jk
-pkg.torch.onnx.name_scopesM['', 'body', 'body.3', 'body.3.attention', 'body.3.attention.1', 'conv2d_16']J¸
-pkg.torch.onnx.stack_trace›File "/tmp/ipykernel_2939/3071178374.py", line 100, in forward
-    feat = self.body(feat)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/tmp/ipykernel_2939/3071178374.py", line 55, in forward
-    attention = self.attention(residual)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/conv.py", line 553, in forward
-    return self._conv_forward(input, self.weight, self.bias)
-¥
-	conv2d_16
-val_33prelu_9node_prelu_9"PReluJá
-	namespace˘: __main__.NexusNetBalanced/body: torch.nn.modules.container.Sequential/body.3: __main__.EfficientResidualBlock/body.3.attention: torch.nn.modules.container.Sequential/body.3.attention.2: torch.nn.modules.activation.PReLU/prelu_9: aten.prelu.defaultJ
-pkg.torch.onnx.class_hierarchyÕ['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', '__main__.EfficientResidualBlock', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.PReLU', 'aten.prelu.default']J®
-pkg.torch.onnx.fx_nodeç%prelu_9 : [num_users=1] = call_function[target=torch.ops.aten.prelu.default](args = (%conv2d_16, %p_body_3_attention_2_weight), kwargs = {})Ji
-pkg.torch.onnx.name_scopesK['', 'body', 'body.3', 'body.3.attention', 'body.3.attention.2', 'prelu_9']JÌ
-pkg.torch.onnx.stack_traceŒFile "/tmp/ipykernel_2939/3071178374.py", line 100, in forward
-    feat = self.body(feat)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/tmp/ipykernel_2939/3071178374.py", line 55, in forward
-    attention = self.attention(residual)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/activation.py", line 1641, in forward
-    return F.prelu(input, self.weight)
-Á
-prelu_9
-body.3.attention.3.weight
-body.3.attention.3.bias	conv2d_17node_conv2d_17"Conv*
-group†*
-pads@ @ @ @ †*
-auto_pad"NOTSET†*
-strides@@†*
-	dilations@@†JÖ
-	namespace˜: __main__.NexusNetBalanced/body: torch.nn.modules.container.Sequential/body.3: __main__.EfficientResidualBlock/body.3.attention: torch.nn.modules.container.Sequential/body.3.attention.3: torch.nn.modules.conv.Conv2d/conv2d_17: aten.conv2d.defaultJÏ
-pkg.torch.onnx.class_hierarchy…['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', '__main__.EfficientResidualBlock', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J≈
-pkg.torch.onnx.fx_node™%conv2d_17 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%prelu_9, %p_body_3_attention_3_weight, %p_body_3_attention_3_bias), kwargs = {})Jk
-pkg.torch.onnx.name_scopesM['', 'body', 'body.3', 'body.3.attention', 'body.3.attention.3', 'conv2d_17']J¸
-pkg.torch.onnx.stack_trace›File "/tmp/ipykernel_2939/3071178374.py", line 100, in forward
-    feat = self.body(feat)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/tmp/ipykernel_2939/3071178374.py", line 55, in forward
-    attention = self.attention(residual)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/conv.py", line 553, in forward
-    return self._conv_forward(input, self.weight, self.bias)
-ú
-	conv2d_17	sigmoid_3node_sigmoid_3"SigmoidJç
-	namespaceˇ: __main__.NexusNetBalanced/body: torch.nn.modules.container.Sequential/body.3: __main__.EfficientResidualBlock/body.3.attention: torch.nn.modules.container.Sequential/body.3.attention.4: torch.nn.modules.activation.Sigmoid/sigmoid_3: aten.sigmoid.defaultJÙ
-pkg.torch.onnx.class_hierarchy—['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', '__main__.EfficientResidualBlock', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.Sigmoid', 'aten.sigmoid.default']Jé
-pkg.torch.onnx.fx_nodet%sigmoid_3 : [num_users=1] = call_function[target=torch.ops.aten.sigmoid.default](args = (%conv2d_17,), kwargs = {})Jk
-pkg.torch.onnx.name_scopesM['', 'body', 'body.3', 'body.3.attention', 'body.3.attention.4', 'sigmoid_3']JÂ
-pkg.torch.onnx.stack_trace∆File "/tmp/ipykernel_2939/3071178374.py", line 100, in forward
-    feat = self.body(feat)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/tmp/ipykernel_2939/3071178374.py", line 55, in forward
-    attention = self.attention(residual)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/activation.py", line 358, in forward
-    return torch.sigmoid(input)
-†
-	conv2d_15
-	sigmoid_3mul_153node_mul_153"MulJñ
-	namespaceà: __main__.NexusNetBalanced/body: torch.nn.modules.container.Sequential/body.3: __main__.EfficientResidualBlock/mul_153: aten.mul.TensorJû
-pkg.torch.onnx.class_hierarchy|['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', '__main__.EfficientResidualBlock', 'aten.mul.Tensor']Jí
-pkg.torch.onnx.fx_nodex%mul_153 : [num_users=1] = call_function[target=torch.ops.aten.mul.Tensor](args = (%conv2d_15, %sigmoid_3), kwargs = {})J?
-pkg.torch.onnx.name_scopes!['', 'body', 'body.3', 'mul_153']J€
-pkg.torch.onnx.stack_traceºFile "/tmp/ipykernel_2939/3071178374.py", line 100, in forward
-    feat = self.body(feat)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/tmp/ipykernel_2939/3071178374.py", line 56, in forward
-    residual = residual * attention
-å
-add_169
-mul_153add_220node_add_220"AddJñ
-	namespaceà: __main__.NexusNetBalanced/body: torch.nn.modules.container.Sequential/body.3: __main__.EfficientResidualBlock/add_220: aten.add.TensorJû
-pkg.torch.onnx.class_hierarchy|['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', '__main__.EfficientResidualBlock', 'aten.add.Tensor']Jé
-pkg.torch.onnx.fx_nodet%add_220 : [num_users=1] = call_function[target=torch.ops.aten.add.Tensor](args = (%add_169, %mul_153), kwargs = {})J?
-pkg.torch.onnx.name_scopes!['', 'body', 'body.3', 'add_220']Jœ
-pkg.torch.onnx.stack_trace∞File "/tmp/ipykernel_2939/3071178374.py", line 100, in forward
-    feat = self.body(feat)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/tmp/ipykernel_2939/3071178374.py", line 57, in forward
-    return x + residual
-Á
-add_220
-upscale.conv.weight
-upscale.conv.bias	conv2d_18node_conv2d_18"Conv*
-group†*
-pads@@@@†*
-auto_pad"NOTSET†*
-strides@@†*
-	dilations@@†Jñ
-	namespaceà: __main__.NexusNetBalanced/upscale: __main__.EfficientUpscale/upscale.conv: torch.nn.modules.conv.Conv2d/conv2d_18: aten.conv2d.defaultJì
-pkg.torch.onnx.class_hierarchyq['__main__.NexusNetBalanced', '__main__.EfficientUpscale', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J…
-pkg.torch.onnx.fx_nodeÆ%conv2d_18 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%add_220, %p_upscale_conv_weight, %p_upscale_conv_bias, [1, 1], [1, 1]), kwargs = {})JJ
-pkg.torch.onnx.name_scopes,['', 'upscale', 'upscale.conv', 'conv2d_18']JÌ
-pkg.torch.onnx.stack_traceŒFile "/tmp/ipykernel_2939/3071178374.py", line 101, in forward
+	namespaceπ: __main__.NexusNetEnhanced/upscale: __main__.DetailUpscale/upscale.up1: torch.nn.modules.container.Sequential/upscale.up1.0: torch.nn.modules.conv.Conv2d/conv2d_15: aten.conv2d.defaultJ∫
+pkg.torch.onnx.class_hierarchyó['__main__.NexusNetEnhanced', '__main__.DetailUpscale', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']JÀ
+pkg.torch.onnx.fx_node∞%conv2d_15 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%add_169, %p_upscale_up1_0_weight, %p_upscale_up1_0_bias, [1, 1], [1, 1]), kwargs = {})JZ
+pkg.torch.onnx.name_scopes<['', 'upscale', 'upscale.up1', 'upscale.up1.0', 'conv2d_15']JÎ
+pkg.torch.onnx.stack_traceÃFile "/tmp/ipykernel_2304/2682082711.py", line 135, in forward
     feat = self.upscale(feat)
-  File "/tmp/ipykernel_2939/3071178374.py", line 72, in forward
-    x = self.conv(x)
+  File "/tmp/ipykernel_2304/2682082711.py", line 75, in forward
+    x = self.up1(x)
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/conv.py", line 553, in forward
     return self._conv_forward(input, self.weight, self.bias)
-§
-	conv2d_18pixel_shufflenode_pixel_shuffle"DepthToSpace*
+Ä
+
+	conv2d_15pixel_shufflenode_pixel_shuffle"DepthToSpace*
 mode"CRD†*
-	blocksize†J≤
-	namespace§: __main__.NexusNetBalanced/upscale: __main__.EfficientUpscale/upscale.shuffle: torch.nn.modules.pixelshuffle.PixelShuffle/pixel_shuffle: aten.pixel_shuffle.defaultJ©
-pkg.torch.onnx.class_hierarchyÜ['__main__.NexusNetBalanced', '__main__.EfficientUpscale', 'torch.nn.modules.pixelshuffle.PixelShuffle', 'aten.pixel_shuffle.default']Jõ
-pkg.torch.onnx.fx_nodeÄ%pixel_shuffle : [num_users=1] = call_function[target=torch.ops.aten.pixel_shuffle.default](args = (%conv2d_18, 3), kwargs = {})JQ
-pkg.torch.onnx.name_scopes3['', 'upscale', 'upscale.shuffle', 'pixel_shuffle']JÒ
-pkg.torch.onnx.stack_trace“File "/tmp/ipykernel_2939/3071178374.py", line 101, in forward
+	blocksize†J‡
+	namespace“: __main__.NexusNetEnhanced/upscale: __main__.DetailUpscale/upscale.up1: torch.nn.modules.container.Sequential/upscale.up1.1: torch.nn.modules.pixelshuffle.PixelShuffle/pixel_shuffle: aten.pixel_shuffle.defaultJœ
+pkg.torch.onnx.class_hierarchy¨['__main__.NexusNetEnhanced', '__main__.DetailUpscale', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.pixelshuffle.PixelShuffle', 'aten.pixel_shuffle.default']Jõ
+pkg.torch.onnx.fx_nodeÄ%pixel_shuffle : [num_users=1] = call_function[target=torch.ops.aten.pixel_shuffle.default](args = (%conv2d_15, 2), kwargs = {})J^
+pkg.torch.onnx.name_scopes@['', 'upscale', 'upscale.up1', 'upscale.up1.1', 'pixel_shuffle']JÏ
+pkg.torch.onnx.stack_traceÕFile "/tmp/ipykernel_2304/2682082711.py", line 135, in forward
     feat = self.upscale(feat)
-  File "/tmp/ipykernel_2939/3071178374.py", line 73, in forward
-    x = self.shuffle(x)
+  File "/tmp/ipykernel_2304/2682082711.py", line 75, in forward
+    x = self.up1(x)
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/pixelshuffle.py", line 62, in forward
     return F.pixel_shuffle(input, self.upscale_factor)
-˜
-pixel_shuffle
-avg_pool2dnode_avg_pool2d"AveragePool*
-count_include_pad†*
-	ceil_mode †*
-pads@ @ @ @ †*
-auto_pad"NOTSET†*
-strides@@†*
-kernel_shape@@†Jo
-	namespaceb: __main__.NexusNetBalanced/upscale: __main__.EfficientUpscale/avg_pool2d: aten.avg_pool2d.defaultJw
-pkg.torch.onnx.class_hierarchyU['__main__.NexusNetBalanced', '__main__.EfficientUpscale', 'aten.avg_pool2d.default']J¶
-pkg.torch.onnx.fx_nodeã%avg_pool2d : [num_users=1] = call_function[target=torch.ops.aten.avg_pool2d.default](args = (%pixel_shuffle, [2, 2], [2, 2]), kwargs = {})J;
-pkg.torch.onnx.name_scopes['', 'upscale', 'avg_pool2d']JÏ
-pkg.torch.onnx.stack_traceÕFile "/tmp/ipykernel_2939/3071178374.py", line 101, in forward
+™	
+pixel_shuffle
+val_20prelu_10node_prelu_10"PReluJ 
+	namespaceº: __main__.NexusNetEnhanced/upscale: __main__.DetailUpscale/upscale.up1: torch.nn.modules.container.Sequential/upscale.up1.2: torch.nn.modules.activation.PReLU/prelu_10: aten.prelu.defaultJæ
+pkg.torch.onnx.class_hierarchyõ['__main__.NexusNetEnhanced', '__main__.DetailUpscale', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.PReLU', 'aten.prelu.default']J®
+pkg.torch.onnx.fx_nodeç%prelu_10 : [num_users=1] = call_function[target=torch.ops.aten.prelu.default](args = (%pixel_shuffle, %p_upscale_up1_2_weight), kwargs = {})JY
+pkg.torch.onnx.name_scopes;['', 'upscale', 'upscale.up1', 'upscale.up1.2', 'prelu_10']J‹
+pkg.torch.onnx.stack_traceΩFile "/tmp/ipykernel_2304/2682082711.py", line 135, in forward
     feat = self.upscale(feat)
-  File "/tmp/ipykernel_2939/3071178374.py", line 74, in forward
-    x = nn.functional.avg_pool2d(x, 2, stride=2)
-¯
+  File "/tmp/ipykernel_2304/2682082711.py", line 75, in forward
+    x = self.up1(x)
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/activation.py", line 1641, in forward
+    return F.prelu(input, self.weight)
+”
 
-
-avg_pool2d
-upscale.refine.0.weight
-upscale.refine.0.bias	conv2d_19node_conv2d_19"Conv*
+prelu_10
+upscale.up2.0.weight
+upscale.up2.0.bias	conv2d_16node_conv2d_16"Conv*
 group†*
 pads@@@@†*
 auto_pad"NOTSET†*
 strides@@†*
-	dilations@@†J–
-	namespace¬: __main__.NexusNetBalanced/upscale: __main__.EfficientUpscale/upscale.refine: torch.nn.modules.container.Sequential/upscale.refine.0: torch.nn.modules.conv.Conv2d/conv2d_19: aten.conv2d.defaultJΩ
-pkg.torch.onnx.class_hierarchyö['__main__.NexusNetBalanced', '__main__.EfficientUpscale', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J‘
-pkg.torch.onnx.fx_nodeπ%conv2d_19 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%avg_pool2d, %p_upscale_refine_0_weight, %p_upscale_refine_0_bias, [1, 1], [1, 1]), kwargs = {})J`
-pkg.torch.onnx.name_scopesB['', 'upscale', 'upscale.refine', 'upscale.refine.0', 'conv2d_19']JÓ
-pkg.torch.onnx.stack_traceœFile "/tmp/ipykernel_2939/3071178374.py", line 101, in forward
+	dilations@@†J«
+	namespaceπ: __main__.NexusNetEnhanced/upscale: __main__.DetailUpscale/upscale.up2: torch.nn.modules.container.Sequential/upscale.up2.0: torch.nn.modules.conv.Conv2d/conv2d_16: aten.conv2d.defaultJ∫
+pkg.torch.onnx.class_hierarchyó['__main__.NexusNetEnhanced', '__main__.DetailUpscale', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']JÃ
+pkg.torch.onnx.fx_node±%conv2d_16 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%prelu_10, %p_upscale_up2_0_weight, %p_upscale_up2_0_bias, [1, 1], [1, 1]), kwargs = {})JZ
+pkg.torch.onnx.name_scopes<['', 'upscale', 'upscale.up2', 'upscale.up2.0', 'conv2d_16']JÎ
+pkg.torch.onnx.stack_traceÃFile "/tmp/ipykernel_2304/2682082711.py", line 135, in forward
     feat = self.upscale(feat)
-  File "/tmp/ipykernel_2939/3071178374.py", line 75, in forward
+  File "/tmp/ipykernel_2304/2682082711.py", line 77, in forward
+    x = self.up2(x)
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/conv.py", line 553, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+ä
+
+	conv2d_16pixel_shuffle_1node_pixel_shuffle_1"DepthToSpace*
+mode"CRD†*
+	blocksize†J‚
+	namespace‘: __main__.NexusNetEnhanced/upscale: __main__.DetailUpscale/upscale.up2: torch.nn.modules.container.Sequential/upscale.up2.1: torch.nn.modules.pixelshuffle.PixelShuffle/pixel_shuffle_1: aten.pixel_shuffle.defaultJœ
+pkg.torch.onnx.class_hierarchy¨['__main__.NexusNetEnhanced', '__main__.DetailUpscale', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.pixelshuffle.PixelShuffle', 'aten.pixel_shuffle.default']Jù
+pkg.torch.onnx.fx_nodeÇ%pixel_shuffle_1 : [num_users=1] = call_function[target=torch.ops.aten.pixel_shuffle.default](args = (%conv2d_16, 2), kwargs = {})J`
+pkg.torch.onnx.name_scopesB['', 'upscale', 'upscale.up2', 'upscale.up2.1', 'pixel_shuffle_1']JÏ
+pkg.torch.onnx.stack_traceÕFile "/tmp/ipykernel_2304/2682082711.py", line 135, in forward
+    feat = self.upscale(feat)
+  File "/tmp/ipykernel_2304/2682082711.py", line 77, in forward
+    x = self.up2(x)
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/pixelshuffle.py", line 62, in forward
+    return F.pixel_shuffle(input, self.upscale_factor)
+Æ	
+pixel_shuffle_1
+val_21prelu_11node_prelu_11"PReluJ 
+	namespaceº: __main__.NexusNetEnhanced/upscale: __main__.DetailUpscale/upscale.up2: torch.nn.modules.container.Sequential/upscale.up2.2: torch.nn.modules.activation.PReLU/prelu_11: aten.prelu.defaultJæ
+pkg.torch.onnx.class_hierarchyõ['__main__.NexusNetEnhanced', '__main__.DetailUpscale', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.PReLU', 'aten.prelu.default']J™
+pkg.torch.onnx.fx_nodeè%prelu_11 : [num_users=1] = call_function[target=torch.ops.aten.prelu.default](args = (%pixel_shuffle_1, %p_upscale_up2_2_weight), kwargs = {})JY
+pkg.torch.onnx.name_scopes;['', 'upscale', 'upscale.up2', 'upscale.up2.2', 'prelu_11']J‹
+pkg.torch.onnx.stack_traceΩFile "/tmp/ipykernel_2304/2682082711.py", line 135, in forward
+    feat = self.upscale(feat)
+  File "/tmp/ipykernel_2304/2682082711.py", line 77, in forward
+    x = self.up2(x)
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
+    input = module(input)
+  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/activation.py", line 1641, in forward
+    return F.prelu(input, self.weight)
+¿
+prelu_11val_22node_Shape_22"Shape*
+
+end†*
+start †Jz
+	namespacem: __main__.NexusNetEnhanced/upscale: __main__.DetailUpscale/upsample_bilinear2d: aten.upsample_bilinear2d.vecJy
+pkg.torch.onnx.class_hierarchyW['__main__.NexusNetEnhanced', '__main__.DetailUpscale', 'aten.upsample_bilinear2d.vec']J∫
+pkg.torch.onnx.fx_nodeü%upsample_bilinear2d : [num_users=1] = call_function[target=torch.ops.aten.upsample_bilinear2d.vec](args = (%prelu_11, [2160, 3840], False, None), kwargs = {})JD
+pkg.torch.onnx.name_scopes&['', 'upscale', 'upsample_bilinear2d']JÅ
+pkg.torch.onnx.stack_trace‚File "/tmp/ipykernel_2304/2682082711.py", line 135, in forward
+    feat = self.upscale(feat)
+  File "/tmp/ipykernel_2304/2682082711.py", line 81, in forward
+    x = torch.nn.functional.interpolate(x, size=(target_h, target_w),
+ª
+val_22
+val_24val_25node_Concat_25"Concat*
+axis †Jz
+	namespacem: __main__.NexusNetEnhanced/upscale: __main__.DetailUpscale/upsample_bilinear2d: aten.upsample_bilinear2d.vecJy
+pkg.torch.onnx.class_hierarchyW['__main__.NexusNetEnhanced', '__main__.DetailUpscale', 'aten.upsample_bilinear2d.vec']J∫
+pkg.torch.onnx.fx_nodeü%upsample_bilinear2d : [num_users=1] = call_function[target=torch.ops.aten.upsample_bilinear2d.vec](args = (%prelu_11, [2160, 3840], False, None), kwargs = {})JD
+pkg.torch.onnx.name_scopes&['', 'upscale', 'upsample_bilinear2d']JÅ
+pkg.torch.onnx.stack_trace‚File "/tmp/ipykernel_2304/2682082711.py", line 135, in forward
+    feat = self.upscale(feat)
+  File "/tmp/ipykernel_2304/2682082711.py", line 81, in forward
+    x = torch.nn.functional.interpolate(x, size=(target_h, target_w),
+ª
+prelu_11
+ 
+ 
+val_25upsample_bilinear2dnode_upsample_bilinear2d"Resize*&
+keep_aspect_ratio_policy"stretch†*
+	antialias †*
+extrapolation_value    †*
+exclude_outside †*
+nearest_mode"floor†*7
+coordinate_transformation_mode"pytorch_half_pixel†*
+cubic_coeff_a  @ø†*
+mode"linear†Jz
+	namespacem: __main__.NexusNetEnhanced/upscale: __main__.DetailUpscale/upsample_bilinear2d: aten.upsample_bilinear2d.vecJy
+pkg.torch.onnx.class_hierarchyW['__main__.NexusNetEnhanced', '__main__.DetailUpscale', 'aten.upsample_bilinear2d.vec']J∫
+pkg.torch.onnx.fx_nodeü%upsample_bilinear2d : [num_users=1] = call_function[target=torch.ops.aten.upsample_bilinear2d.vec](args = (%prelu_11, [2160, 3840], False, None), kwargs = {})JD
+pkg.torch.onnx.name_scopes&['', 'upscale', 'upsample_bilinear2d']JÅ
+pkg.torch.onnx.stack_trace‚File "/tmp/ipykernel_2304/2682082711.py", line 135, in forward
+    feat = self.upscale(feat)
+  File "/tmp/ipykernel_2304/2682082711.py", line 81, in forward
+    x = torch.nn.functional.interpolate(x, size=(target_h, target_w),
+Ñ
+upsample_bilinear2d
+upscale.refine.0.weight
+upscale.refine.0.bias	conv2d_17node_conv2d_17"Conv*
+group†*
+pads@@@@†*
+auto_pad"NOTSET†*
+strides@@†*
+	dilations@@†JÕ
+	namespaceø: __main__.NexusNetEnhanced/upscale: __main__.DetailUpscale/upscale.refine: torch.nn.modules.container.Sequential/upscale.refine.0: torch.nn.modules.conv.Conv2d/conv2d_17: aten.conv2d.defaultJ∫
+pkg.torch.onnx.class_hierarchyó['__main__.NexusNetEnhanced', '__main__.DetailUpscale', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J›
+pkg.torch.onnx.fx_node¬%conv2d_17 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%upsample_bilinear2d, %p_upscale_refine_0_weight, %p_upscale_refine_0_bias, [1, 1], [1, 1]), kwargs = {})J`
+pkg.torch.onnx.name_scopesB['', 'upscale', 'upscale.refine', 'upscale.refine.0', 'conv2d_17']JÓ
+pkg.torch.onnx.stack_traceœFile "/tmp/ipykernel_2304/2682082711.py", line 135, in forward
+    feat = self.upscale(feat)
+  File "/tmp/ipykernel_2304/2682082711.py", line 84, in forward
     x = self.refine(x)
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/conv.py", line 553, in forward
     return self._conv_forward(input, self.weight, self.bias)
-∫	
-	conv2d_19
-val_34prelu_10node_prelu_10"PReluJ”
-	namespace≈: __main__.NexusNetBalanced/upscale: __main__.EfficientUpscale/upscale.refine: torch.nn.modules.container.Sequential/upscale.refine.1: torch.nn.modules.activation.PReLU/prelu_10: aten.prelu.defaultJ¡
-pkg.torch.onnx.class_hierarchyû['__main__.NexusNetBalanced', '__main__.EfficientUpscale', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.PReLU', 'aten.prelu.default']Jß
-pkg.torch.onnx.fx_nodeå%prelu_10 : [num_users=1] = call_function[target=torch.ops.aten.prelu.default](args = (%conv2d_19, %p_upscale_refine_1_weight), kwargs = {})J_
-pkg.torch.onnx.name_scopesA['', 'upscale', 'upscale.refine', 'upscale.refine.1', 'prelu_10']Jﬂ
-pkg.torch.onnx.stack_trace¿File "/tmp/ipykernel_2939/3071178374.py", line 101, in forward
+¥	
+	conv2d_17
+val_26prelu_12node_prelu_12"PReluJ–
+	namespace¬: __main__.NexusNetEnhanced/upscale: __main__.DetailUpscale/upscale.refine: torch.nn.modules.container.Sequential/upscale.refine.1: torch.nn.modules.activation.PReLU/prelu_12: aten.prelu.defaultJæ
+pkg.torch.onnx.class_hierarchyõ['__main__.NexusNetEnhanced', '__main__.DetailUpscale', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.PReLU', 'aten.prelu.default']Jß
+pkg.torch.onnx.fx_nodeå%prelu_12 : [num_users=1] = call_function[target=torch.ops.aten.prelu.default](args = (%conv2d_17, %p_upscale_refine_1_weight), kwargs = {})J_
+pkg.torch.onnx.name_scopesA['', 'upscale', 'upscale.refine', 'upscale.refine.1', 'prelu_12']Jﬂ
+pkg.torch.onnx.stack_trace¿File "/tmp/ipykernel_2304/2682082711.py", line 135, in forward
     feat = self.upscale(feat)
-  File "/tmp/ipykernel_2939/3071178374.py", line 75, in forward
+  File "/tmp/ipykernel_2304/2682082711.py", line 84, in forward
     x = self.refine(x)
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/activation.py", line 1641, in forward
     return F.prelu(input, self.weight)
-Ù
+Ó
 
-prelu_10
+prelu_12
 upscale.refine.2.weight
-upscale.refine.2.bias	conv2d_20node_conv2d_20"Conv*
+upscale.refine.2.bias	conv2d_18node_conv2d_18"Conv*
 group†*
 pads@@@@†*
 auto_pad"NOTSET†*
 strides@@†*
-	dilations@@†J–
-	namespace¬: __main__.NexusNetBalanced/upscale: __main__.EfficientUpscale/upscale.refine: torch.nn.modules.container.Sequential/upscale.refine.2: torch.nn.modules.conv.Conv2d/conv2d_20: aten.conv2d.defaultJΩ
-pkg.torch.onnx.class_hierarchyö['__main__.NexusNetBalanced', '__main__.EfficientUpscale', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J“
-pkg.torch.onnx.fx_node∑%conv2d_20 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%prelu_10, %p_upscale_refine_2_weight, %p_upscale_refine_2_bias, [1, 1], [1, 1]), kwargs = {})J`
-pkg.torch.onnx.name_scopesB['', 'upscale', 'upscale.refine', 'upscale.refine.2', 'conv2d_20']JÓ
-pkg.torch.onnx.stack_traceœFile "/tmp/ipykernel_2939/3071178374.py", line 101, in forward
+	dilations@@†JÕ
+	namespaceø: __main__.NexusNetEnhanced/upscale: __main__.DetailUpscale/upscale.refine: torch.nn.modules.container.Sequential/upscale.refine.2: torch.nn.modules.conv.Conv2d/conv2d_18: aten.conv2d.defaultJ∫
+pkg.torch.onnx.class_hierarchyó['__main__.NexusNetEnhanced', '__main__.DetailUpscale', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']J“
+pkg.torch.onnx.fx_node∑%conv2d_18 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%prelu_12, %p_upscale_refine_2_weight, %p_upscale_refine_2_bias, [1, 1], [1, 1]), kwargs = {})J`
+pkg.torch.onnx.name_scopesB['', 'upscale', 'upscale.refine', 'upscale.refine.2', 'conv2d_18']JÓ
+pkg.torch.onnx.stack_traceœFile "/tmp/ipykernel_2304/2682082711.py", line 135, in forward
     feat = self.upscale(feat)
-  File "/tmp/ipykernel_2939/3071178374.py", line 75, in forward
+  File "/tmp/ipykernel_2304/2682082711.py", line 84, in forward
     x = self.refine(x)
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/conv.py", line 553, in forward
     return self._conv_forward(input, self.weight, self.bias)
-∫	
-	conv2d_20
-val_35prelu_11node_prelu_11"PReluJ”
-	namespace≈: __main__.NexusNetBalanced/upscale: __main__.EfficientUpscale/upscale.refine: torch.nn.modules.container.Sequential/upscale.refine.3: torch.nn.modules.activation.PReLU/prelu_11: aten.prelu.defaultJ¡
-pkg.torch.onnx.class_hierarchyû['__main__.NexusNetBalanced', '__main__.EfficientUpscale', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.PReLU', 'aten.prelu.default']Jß
-pkg.torch.onnx.fx_nodeå%prelu_11 : [num_users=1] = call_function[target=torch.ops.aten.prelu.default](args = (%conv2d_20, %p_upscale_refine_3_weight), kwargs = {})J_
-pkg.torch.onnx.name_scopesA['', 'upscale', 'upscale.refine', 'upscale.refine.3', 'prelu_11']Jﬂ
-pkg.torch.onnx.stack_trace¿File "/tmp/ipykernel_2939/3071178374.py", line 101, in forward
+¥	
+	conv2d_18
+val_27prelu_13node_prelu_13"PReluJ–
+	namespace¬: __main__.NexusNetEnhanced/upscale: __main__.DetailUpscale/upscale.refine: torch.nn.modules.container.Sequential/upscale.refine.3: torch.nn.modules.activation.PReLU/prelu_13: aten.prelu.defaultJæ
+pkg.torch.onnx.class_hierarchyõ['__main__.NexusNetEnhanced', '__main__.DetailUpscale', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.PReLU', 'aten.prelu.default']Jß
+pkg.torch.onnx.fx_nodeå%prelu_13 : [num_users=1] = call_function[target=torch.ops.aten.prelu.default](args = (%conv2d_18, %p_upscale_refine_3_weight), kwargs = {})J_
+pkg.torch.onnx.name_scopesA['', 'upscale', 'upscale.refine', 'upscale.refine.3', 'prelu_13']Jﬂ
+pkg.torch.onnx.stack_trace¿File "/tmp/ipykernel_2304/2682082711.py", line 135, in forward
     feat = self.upscale(feat)
-  File "/tmp/ipykernel_2939/3071178374.py", line 75, in forward
+  File "/tmp/ipykernel_2304/2682082711.py", line 84, in forward
     x = self.refine(x)
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/activation.py", line 1641, in forward
     return F.prelu(input, self.weight)
 ˛
-prelu_11
+prelu_13
 tail.0.weight
-tail.0.bias	conv2d_21node_conv2d_21"Conv*
+tail.0.bias	conv2d_19node_conv2d_19"Conv*
 group†*
 pads@@@@†*
 auto_pad"NOTSET†*
 strides@@†*
 	dilations@@†Jô
-	namespaceã: __main__.NexusNetBalanced/tail: torch.nn.modules.container.Sequential/tail.0: torch.nn.modules.conv.Conv2d/conv2d_21: aten.conv2d.defaultJü
-pkg.torch.onnx.class_hierarchy}['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']Jæ
-pkg.torch.onnx.fx_node£%conv2d_21 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%prelu_11, %p_tail_0_weight, %p_tail_0_bias, [1, 1], [1, 1]), kwargs = {})JA
-pkg.torch.onnx.name_scopes#['', 'tail', 'tail.0', 'conv2d_21']Jî
-pkg.torch.onnx.stack_traceıFile "/tmp/ipykernel_2939/3071178374.py", line 102, in forward
+	namespaceã: __main__.NexusNetEnhanced/tail: torch.nn.modules.container.Sequential/tail.0: torch.nn.modules.conv.Conv2d/conv2d_19: aten.conv2d.defaultJü
+pkg.torch.onnx.class_hierarchy}['__main__.NexusNetEnhanced', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']Jæ
+pkg.torch.onnx.fx_node£%conv2d_19 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%prelu_13, %p_tail_0_weight, %p_tail_0_bias, [1, 1], [1, 1]), kwargs = {})JA
+pkg.torch.onnx.name_scopes#['', 'tail', 'tail.0', 'conv2d_19']Jî
+pkg.torch.onnx.stack_traceıFile "/tmp/ipykernel_2304/2682082711.py", line 136, in forward
     return self.tail(feat)
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/conv.py", line 553, in forward
     return self._conv_forward(input, self.weight, self.bias)
 „
-	conv2d_21
-val_36prelu_12node_prelu_12"PReluJú
-	namespaceé: __main__.NexusNetBalanced/tail: torch.nn.modules.container.Sequential/tail.1: torch.nn.modules.activation.PReLU/prelu_12: aten.prelu.defaultJ§
-pkg.torch.onnx.class_hierarchyÅ['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.PReLU', 'aten.prelu.default']Jù
-pkg.torch.onnx.fx_nodeÇ%prelu_12 : [num_users=1] = call_function[target=torch.ops.aten.prelu.default](args = (%conv2d_21, %p_tail_1_weight), kwargs = {})J@
-pkg.torch.onnx.name_scopes"['', 'tail', 'tail.1', 'prelu_12']JÖ
-pkg.torch.onnx.stack_traceÊFile "/tmp/ipykernel_2939/3071178374.py", line 102, in forward
+	conv2d_19
+val_28prelu_14node_prelu_14"PReluJú
+	namespaceé: __main__.NexusNetEnhanced/tail: torch.nn.modules.container.Sequential/tail.1: torch.nn.modules.activation.PReLU/prelu_14: aten.prelu.defaultJ§
+pkg.torch.onnx.class_hierarchyÅ['__main__.NexusNetEnhanced', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.PReLU', 'aten.prelu.default']Jù
+pkg.torch.onnx.fx_nodeÇ%prelu_14 : [num_users=1] = call_function[target=torch.ops.aten.prelu.default](args = (%conv2d_19, %p_tail_1_weight), kwargs = {})J@
+pkg.torch.onnx.name_scopes"['', 'tail', 'tail.1', 'prelu_14']JÖ
+pkg.torch.onnx.stack_traceÊFile "/tmp/ipykernel_2304/2682082711.py", line 136, in forward
     return self.tail(feat)
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/activation.py", line 1641, in forward
     return F.prelu(input, self.weight)
-˛
-prelu_12
+˚
+prelu_14
 tail.2.weight
-tail.2.bias	conv2d_22node_conv2d_22"Conv*
+tail.2.biasoutputnode_conv2d_20"Conv*
 group†*
 pads@@@@†*
 auto_pad"NOTSET†*
 strides@@†*
 	dilations@@†Jô
-	namespaceã: __main__.NexusNetBalanced/tail: torch.nn.modules.container.Sequential/tail.2: torch.nn.modules.conv.Conv2d/conv2d_22: aten.conv2d.defaultJü
-pkg.torch.onnx.class_hierarchy}['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']Jæ
-pkg.torch.onnx.fx_node£%conv2d_22 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%prelu_12, %p_tail_2_weight, %p_tail_2_bias, [1, 1], [1, 1]), kwargs = {})JA
-pkg.torch.onnx.name_scopes#['', 'tail', 'tail.2', 'conv2d_22']Jî
-pkg.torch.onnx.stack_traceıFile "/tmp/ipykernel_2939/3071178374.py", line 102, in forward
+	namespaceã: __main__.NexusNetEnhanced/tail: torch.nn.modules.container.Sequential/tail.2: torch.nn.modules.conv.Conv2d/conv2d_20: aten.conv2d.defaultJü
+pkg.torch.onnx.class_hierarchy}['__main__.NexusNetEnhanced', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.conv.Conv2d', 'aten.conv2d.default']Jæ
+pkg.torch.onnx.fx_node£%conv2d_20 : [num_users=1] = call_function[target=torch.ops.aten.conv2d.default](args = (%prelu_14, %p_tail_2_weight, %p_tail_2_bias, [1, 1], [1, 1]), kwargs = {})JA
+pkg.torch.onnx.name_scopes#['', 'tail', 'tail.2', 'conv2d_20']Jî
+pkg.torch.onnx.stack_traceıFile "/tmp/ipykernel_2304/2682082711.py", line 136, in forward
     return self.tail(feat)
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
     input = module(input)
   File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/conv.py", line 553, in forward
-    return self._conv_forward(input, self.weight, self.bias)
-œ
-	conv2d_22outputnode_sigmoid_4"SigmoidJ°
-	namespaceì: __main__.NexusNetBalanced/tail: torch.nn.modules.container.Sequential/tail.3: torch.nn.modules.activation.Sigmoid/sigmoid_4: aten.sigmoid.defaultJ®
-pkg.torch.onnx.class_hierarchyÖ['__main__.NexusNetBalanced', 'torch.nn.modules.container.Sequential', 'torch.nn.modules.activation.Sigmoid', 'aten.sigmoid.default']Jé
-pkg.torch.onnx.fx_nodet%sigmoid_4 : [num_users=1] = call_function[target=torch.ops.aten.sigmoid.default](args = (%conv2d_22,), kwargs = {})JA
-pkg.torch.onnx.name_scopes#['', 'tail', 'tail.3', 'sigmoid_4']J˝
-pkg.torch.onnx.stack_traceﬁFile "/tmp/ipykernel_2939/3071178374.py", line 102, in forward
-    return self.tail(feat)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/container.py", line 253, in forward
-    input = module(input)
-  File "/usr/local/lib/python3.12/dist-packages/torch/nn/modules/activation.py", line 358, in forward
-    return torch.sigmoid(input)
-main_graph*g Bhead.0.weightj)
-locationnexusnet_production.onnx.dataj
-offset11072j
-length3456p*î Bhead.0.biasJÄÄÜ¨ª1Ùº¿z+º XºÚ˘`<'J.º"F-<D_<'∞‹ªMò<¥¡ë9@-bºåù<Ö†Í;$Gjªèº±ºÒ˘8<œaÜ<ÈØm<'‘Ç<`“<3ë‰ª]yt<ç˜T<wíªPwl9XSû<è®iª¢¨á;Zpô;r-‡ªNÃÅº*î Bhead.2.biasJÄ∑V!ºhK-<©Q<⁄ò7ºh∞< W);~e©<*Nª<1Pd<ZML<}˜O<ﬂæ;\#∏á≈i<sv<ﬁ¿è<≥qºP2<Qh<Ä≤h<‡Yq<uîy;Mì;`§&ºúØª˜5∫MÔg<q,#º%Qñºé+^º˜FºKJÿª*ö Bbody.0.conv1.biasJÄ>é£;}7±82Zc<ÚH	ºß´R< ˜@ºK[<ıª<´‡î<ZÛà<—ö(<…<}C<?gj<ÿÓ=ºÃˆN<◊Ωà<”F*<7ïªû<_<ùªºed{∫vvbº¯Ö`ºÕ∑º/Í,<kºy≥¸ª<≤4<a*ª$7?<˙i ª*ö Bbody.0.conv2.biasJÄ+=8º⁄1\<L<âÃºPôxº’ìºí>r;ö°ì<›≈I<,u<pkç<Û^g<gLUº\M<<˛4I<D(;Ûö;˝7wº¸¬ªø«ê<æaQ<}¨5º≤!<Ò,5ºÆÜ+ºAù
-:T≠<Ò
-ºıGÇº¸&ôºJæ•ºÍÛ–ª*o Bbody.0.attention.1.weightj)
-locationnexusnet_production.onnx.dataj
-offset0j
-length1024p*?Bbody.0.attention.1.biasJ ™»≥:ÇS›ª/	ª´‚∫Öõû:Â∆ªw<…;ñs_ª*r Bbody.0.attention.3.weightj)
-locationnexusnet_production.onnx.dataj
+    return self._conv_forward(input, self.weight, self.bias)
+main_graph*d Bhead.0.weightj'
+locationnexusnet_enhanced.onnx.dataj
+offset2752j
+length3456p*î Bhead.0.biasJÄJÉw:XÈ!;átÔ:à%ïπVã∫˛ª¥B÷ªﬁ–;'›Eª+Ÿ@;O§;äı∫Ó∫≠r¸9‡â?ª€ø;·ßÓ∫9à;3˝ƒ∫q≠ä∏cºÒ≈ªΩÀ ∫ìØ≤ªÑª¶§;ü≤å:&ü8Yﬁ:Y÷ì∫ö»©ª·√ê:*î Bhead.2.biasJÄ∞˛:ù›∫Ÿ™ªnL/ª|õm:¬JÍ∫Â¨~:È§ô:ÙŸ”9&Õd9#¯=ª?ö∂ªât‘∫bm[:ÉÔ∫N+ﬂ:Ç›d∫¬ük;·∫Lî∫Åÿçª‰GYªÃUæªT`∫rs∫ïÍ9åºêπ√ãF;+B:ÒÆ£9K0Ô:ßJª*ö Bbody.0.conv1.biasJÄy%ª¿W7;=8õªÛ‘∫k@º| ªUF€ªØâ∫ECª!H¿ªù"—ªın‡π+‹:j Ç9cˇdª¸∫ÒÖ£ªÛÇ‡∫ëCZªyıäπ…i£ªÂÆ8û∫@∫Ú‰∫∫C¥õ∏ÆÊ∏»Tª»É;7ﬂ∫∫“¥;˛TI:*˝√∫*ö Bbody.0.conv2.biasJÄÑH|πm∞‘∫SDª†≠9ª¿@ª≥aàªˇHFªôDé∫}¿•∫‰Í∏:w◊9·dO∫ÊÀª◊ËåªAô2ª©∫u	¶:v;¡
+¿∑#6:h\?ª%‰ :¡Ûó:”©∫xÛª£»§ª<≤YªØ∆û8·yæ7ªA\ªπI@∫lU:*ô Bbody.0.fuse.biasJÄµ€ :w¶6;ó-:&ï3:é˘≥∫≤|,∫È˙∫ùaç∫•ˆ•;P›∞:|"ä9f›ç∫M!∏:|/¢∫À®x9-e‰:-≠∫âªßÍπÁÑª=≈öπ¶∆Ÿ:$@≈∫•q":áœªlÛõ: ‚´∑BúÅ;ÛQ†:Êø≥ª≥c0;èKª*ö Bbody.1.conv1.biasJÄ˜Ï(9OÜ√∫‹•îª¬<ªímÎ∫∑¨ªÿâ<:—:@n,ªë ˚πHå;>¡Îπ≤˙’ªéÂ∫ì•◊:oŸJªÛøîªVø—∫´';iL°:ì(_:]P∂ªÓÂ¿ª›≠7ªü£í;¥x"∫,,ùª˘Õvªã)æπÍ•`9Œ∞K∫Õ∏ù∫*ö Bbody.1.conv2.biasJÄ}VªŸLƒ∫zb˚∂®N~9|£Yª◊x:ΩØ:áªk¢ª]=Ä∫äí–∫K›ó∫*NZ∫ÅÀπªÂ
+9∂sl9$0åπ.;÷:”‰Œ∏.99Ì≥ª|í∫≥è$;∆‹6;ø:#œQ9≠ò{ª≈hª T•ªr;ﬁı®∫ˆ6Å∫*ô Bbody.1.fuse.biasJÄÀhà8Ê∂>;÷Œı9…e‹9<:'83ª€Ì:A£w:±·ª˚@;Fª¥πíÇ*ª©?∫yÿ‡∫t‡™∫Ñ— ∫Ä»≈:©Ò¨∏Äqßπyaƒ:M/8∫æso:bßGªâ∑ﬁ∫√xh:!ŸÎπï5√∫§hÆ:ò·.:~€:ZØ∫(-ª*ö Bbody.2.conv1.biasJÄ§‘¡9@>9ª& ];Päπ∫– œªó˘vªQÏá∫ÉsªzÆ™ªVª…‹ëªTTªWh∫dèª«uøπ⁄ü‚∫z˙Öª¯‹ªQˇqª"`;Ìæ≠ªÖ3à∫ü¢9π8ªlëπÊﬂÑª2Ñ∫:˘>;Äm9∫‹‚Wª(c®:Ì˘†ª*ö Bbody.2.conv2.biasJÄ.˙vªl#√∫+”(ª-Få:ìÃCªo@ˆ∫õÀºñS;ÒÁ5ª&≥Åªæ€§ªΩÉ(∫Ÿø±ªÔ\Œ∫6I;‡:áû±π◊t;Bœπª∑ëª;Ê/;Ë‡ªäñ7;º‘˜∫’9œª”‡å;Ñsëª√Ùøπ∑H≤:˛GÇªK@ªSÍ∫*ô Bbody.2.fuse.biasJÄ€¨ª5u1ππÅ9Jií∫uä∫¡π)ıÖ:ad$ªkv;ÚÒ@πvìß;†Ù∆∫úÄª†WZ:ú√∫Á„©πÊ9˘Ï=∏¬-;ÍS∫JÆU∏∂¢ü∫.©:ﬂåª∂Ûæ;td;b
+Ÿ∫uæM:Ïä;§
+M;<ñÓ∫cˇ¥∫*ö Bbody.3.conv1.biasJÄ.&∫:¶2ªKÁÿ∫s∆–9áƒª|∫§°◊:mÿT8ÏÌ˛∫ˆñ9:Ïi_;û≥ùªVç9Ùø;8'—ª!£⁄ªåT’ªJºQ˛:°êhª}|2;E1å∫P|•∏{ü∏ª |ªà™µπ0úªîì°∫§£:êN°ªÛÀíªÉª*ö Bbody.3.conv2.biasJÄ\Áˇ:A:µ¢ªZ±Ü∏Ù+±:ù&∫—8¸∫ª~ª˛<Õªò|eªh“O;I⁄:∑Å◊ªëêª Ê}ªŸL∏mq:é_ãª2õÇª√9®·M:jG—∫R0|:Ãπˇ∫¢Ãùª-üëπä˛ã;ú>ªß,Õ∫ùU§ªTïºªÉ„™∫*ô Bbody.3.fuse.biasJÄNNπ£YÈ∫—|æ:¸◊1ª3	Ü∫¨#Â:h◊∞∫®}ù∫¨®˝:Õ©‚∫ï<†:¯&7: °πé-:G¬,∫~1∫2â√∫4∂Öªtè:9&
+ª÷∏Æ9}ã›9ì«	:ZÙ™:epªü∂:Zßcªtûiπ£ùÀ9q≈π‹¸G:
+Ê9ª*ñ Bresidual.biasJÄ{ª’ú&ª¨k-:4fª©Cé∫;Éü∫∫®;> E;ﬂ∆¨:·ˆˇ:ª‹;Ûü:~ïà:(4√ªÈk~:Ñ◊%;xä«:≥Ÿrπq1;´ùn∫Ë£:¶ìπóÉ∫ÆW;Ç¯tª‡’π˚˝:ª_ı8∫¡6:Ï·A;È∂‘∫ÆE∫*`ÄBupscale.up1.0.biasj'
+locationnexusnet_enhanced.onnx.dataj
+offset0j
+length512p*bÄBupscale.up2.0.biasj'
+locationnexusnet_enhanced.onnx.dataj
+offset512j
+length512p*û Bupscale.refine.0.biasJÄ/#pπ<ÜªK÷Uª;æ¿ª("”∫X˘©∫Ü67ªÖÉw8A$1πDØKªûTÄ∫µÜ:ûwEª∆ê ∫5ªn∫A’∫èﬁª5Â\ªF>Bª´jÚªF'ä∫s6^∫^0∫≥ëû∫ƒ–éª;∫4¸J:Âßä∫-ˆ;®O:ÁªÙ≠Ñª*û Bupscale.refine.2.biasJÄ{Ä:IﬂÄªj¬Fª≤ê<π™#6ªûh;eirªACeªM·ªó®9fœ[;l˜°π[°]∫Œô';0∆©∫DÇ+∫∂`7«—º:÷õ\ªJ}uªál∑∏∆+ª¨~˝ª)cSª¥9\»é∫ø–ª›π.ƒn;Î–!ªöËπK8\π*SBtail.0.biasJ@…ÿª—ü’:¨%w∏h∫xª—g∫óCA:N¡π∏&ˆ8ÑPªûæGªxMªèñ≥∫àlÿ∫Ò®d∫˝YØ:*dBtail.2.weightj'
+locationnexusnet_enhanced.onnx.dataj
 offset1024j
-length1024p*† Bbody.0.attention.3.biasJÄ7ﬂÙ9Ó;,ßÖ;„o±∫'+¨;îı˘:Óoy∫Ã”Ò:◊¢√:Ãy;rQÚ:õ∫ENÕ∫O t:îQ;«≤<ºu‹:¡aªB¥:æ¨<ª;Pó.<ŒLt9UÊÆ∏.AÄ:¯`P∫ú◊π¸Ãì∫Â…:p;¨0 ;z"ª*ö Bbody.1.conv1.biasJÄ„Cºuº5_Ùª«PM<Á3<WWì<cmYºêØ;⁄Ë <JÈ9º™f<4NC<î¶<òl‹∫Ù∫<∫	X<m2U;@¥<S‰ˆª m{ºÇ˜Fª>F!ºEhºÅ1<Iq;li<∑ﬂ^<&ö<º˛í*<2ÁAº?≥¯;Áª*ö Bbody.1.conv2.biasJÄß≥ºd*Ü<•qu<∆êöª Lhº⁄»^ºÊ.<5¡<∂ç<<™3<ÍΩ <ÿËç<ê</«C<f{I<⁄˙R<◊)\ª‹yººº◊ø”;a†Ö<â Éº·„P<©CFº,Í=º∆◊ü;ˇèu<z≈·ª˛qëºÙπöºw"[º?ùû;*r Bbody.1.attention.1.weightj)
-locationnexusnet_production.onnx.dataj
-offset2048j
-length1024p*?Bbody.1.attention.1.biasJ À¢w∫îcx:®œªH>#;û”;8üqhπ7	ƒª–t˚;*r Bbody.1.attention.3.weightj)
-locationnexusnet_production.onnx.dataj
-offset3072j
-length1024p*† Bbody.1.attention.3.biasJÄí,q∏bÎLª˝mﬂ;˜Â‰9aÈ:yœ∫®°9≈≠u<Èûà:Ù∫¥;•Û<Ÿ=	πq4<ƒìªl∫ªÛ@;ºÅª7Æ˘;bi⁄:#á|<ÇÓP;Bãa;¨´Û:áL„πL◊9|:nª´íª5Í∏˚f":√i…ªÏ∑t;P˜l9*ö Bbody.2.conv1.biasJÄÍÉxº;’º8ÁªæÉºÃwdº∞Ñ<\Ó5< ≈ª≈πö∆9’æ<òº{€á∫ô€π$>O<´Dòº˘áª<Êq<qp&ºú¿	ªÃØªÚÙV<Îwu<√+ºrõ,< ç#ºHÏ–;•∑1<ÿZ<=n<%ø∫Z€<<*ö Bbody.2.conv2.biasJÄh˜óºNu7<M*f<0ºhºÜ<i≥%<∆b¿<<Ä&<¥[^<ˆπÉ<¡4^<zWº‹ﬂ<ºh:<A©˜;2k
-ºõifº.	<t.ı;ÃN<wÜºx/'<ÄJºòëjºÀq∫;  2<]*\<ãJïº°!?º/Yˆ;2<*r Bbody.2.attention.1.weightj)
-locationnexusnet_production.onnx.dataj
-offset4096j
-length1024p*?Bbody.2.attention.1.biasJ g~æ8YÉπTv∂:äDªÅ-:|‘ª=œª±∫*r Bbody.2.attention.3.weightj)
-locationnexusnet_production.onnx.dataj
-offset5120j
-length1024p*† Bbody.2.attention.3.biasJÄ`W<ß∞U;ﬁ⁄°ª>9Îﬂ;ë,ìª	ö
-ªd;È;ÎÉ∫P{0;i≥¢;ß©π∏ØÅ∫∏£∫≥~.∫ò¸ªÌ`ªX¬2π„ò¿7DŸI<Ò ‚∑¯¶;n`‘∫¶O ªmØô;∞ö+:&JªÃ5÷;µ:≠;4Hl;“.~;zìã:*ö Bbody.3.conv1.biasJÄ'œ3<\Tà<Ïy<¶≥;Óﬁk<æòûºE+º© ÿ;ãw"< ç:A∫Ñ<ÊéªLìA<≤∂4<–^};ùÅ~<y»V<Ö ;	r¥9\º∫Ç«‚ª9“zºÎKGºJ◊<nıáº
-$œª™"ªÉ:;<È‹!<\©ª/˚y∫≠˛ä;*ö Bbody.3.conv2.biasJÄÊÉº¬2Ø∏4@<ìªººπbºæEo<∂ö)<åˆ0<âée<Tåãª≈éq<óJÛ;èºûÌú;≤<’ø/<s8≈ªòáºÊe;·<Jâ}<z(º)ÎÇ;nõ[º«á«ª∑[<eÂb;Rñ	<†4sºñ…ëªòÅ)<ëÊ;*r Bbody.3.attention.1.weightj)
-locationnexusnet_production.onnx.dataj
-offset6144j
-length1024p*?Bbody.3.attention.1.biasJ tœı∏
-ú;ºCÜ∫œï:‚}Yªbe÷∫:¥∏1¥Ö;*r Bbody.3.attention.3.weightj)
-locationnexusnet_production.onnx.dataj
-offset7168j
-length1024p*† Bbody.3.attention.3.biasJÄi?∫r›úª!‘!∫ªU∫.-/:8v;zbz:˙∆”:˜J&ºT•#;\‘:¶ÿ∫¨1 ;—ô∑;x‹;L±b;ª!;né:Ï∆#<	r;M›:•ˆ`;Ÿr;ë∫6:ØÖƒ;-RÒ∫ô√ª¿ˆöπı5:`$-;P7âª ö};*e†Bupscale.conv.biasj)
-locationnexusnet_production.onnx.dataj
-offset8192j
-length1152p*û Bupscale.refine.0.biasJÄ©®˙ªaó4<Æ@ƒªKB@<˚˜(<lè<é®G;^M<∆:<º¡º›øºúA∆<_wî;Ω;∑~Ÿª»íY<î…ª*Õ<j&ë;' ⁄ªs gº5:<ÅQˆ8qÜªQs	< .ºé‡º¶»j<>q`<Jèä;ïwºº*û Bupscale.refine.2.biasJÄU&ª;›Ìºn`O<€)Aºxâ2<”ŸºÇ:<GˇÂª∆§<sD?<‚ºÁªç;<ªìq<9ë˝;òø º3GJª…j ºtHº9ºb…’ªh"Å<éÓ˝ªô©ª}Ùc<ûÊ,<È/N<M<åˆóª0+M;ø›E<·ﬁœª*SBtail.0.biasJ@
-Ÿºéı`<¿µL<˚h@<;tU<iÅ∫‘≥ªó3º+√<lΩÎª£ÈG<ÍÉ<yòHºæi@:T◊ <a$Hº*fBtail.2.weightj)
-locationnexusnet_production.onnx.dataj
-offset9344j
-length1728p*Btail.2.biasJÇ±º.¿#º»ÙKº*h  Bhead.2.weightj)
-locationnexusnet_production.onnx.dataj
-offset32960j
-length36864p*n  Bbody.0.conv1.weightj)
-locationnexusnet_production.onnx.dataj
-offset69824j
-length36864p*o  Bbody.0.conv2.weightj)
-locationnexusnet_production.onnx.dataj
-offset106688j
-length36864p*o  Bbody.1.conv1.weightj)
-locationnexusnet_production.onnx.dataj
-offset143552j
-length36864p*o  Bbody.1.conv2.weightj)
-locationnexusnet_production.onnx.dataj
-offset180416j
-length36864p*o  Bbody.2.conv1.weightj)
-locationnexusnet_production.onnx.dataj
-offset217280j
-length36864p*o  Bbody.2.conv2.weightj)
-locationnexusnet_production.onnx.dataj
-offset254144j
-length36864p*o  Bbody.3.conv1.weightj)
-locationnexusnet_production.onnx.dataj
-offset291008j
-length36864p*o  Bbody.3.conv2.weightj)
-locationnexusnet_production.onnx.dataj
-offset327872j
-length36864p*q† Bupscale.conv.weightj)
-locationnexusnet_production.onnx.dataj
-offset438464j
-length331776p*s  Bupscale.refine.0.weightj)
-locationnexusnet_production.onnx.dataj
-offset364736j
-length36864p*s  Bupscale.refine.2.weightj)
-locationnexusnet_production.onnx.dataj
-offset401600j
-length36864p*h Btail.0.weightj)
-locationnexusnet_production.onnx.dataj
-offset14528j
-length18432p*Bval_15Jé7É>*Bval_16J<Ç>*Bval_17Jü–>*Bval_20Jˇˇˇˇˇˇˇˇ˛ˇˇˇˇˇˇˇ*Bval_21JJ‹Ä>*Bval_22JÈÄ>*Bval_25J-G>*Bval_26JÛà>*Bval_29JçûÅ>*Bval_30J]Å>*Bval_33J¢óx>*Bval_34J˜É>*Bval_35Jøbà>*Bval_36JÑUç>Z⁄
+length1728p*Btail.2.biasJ3¢å:6ÂÑ:“~Ä:*f  Bhead.2.weightj'
+locationnexusnet_enhanced.onnx.dataj
+offset61504j
+length36864p*l  Bbody.0.conv1.weightj'
+locationnexusnet_enhanced.onnx.dataj
+offset98368j
+length36864p*n  Bbody.0.conv2.weightj'
+locationnexusnet_enhanced.onnx.dataj
+offset319552j
+length102400p*j @Bbody.0.fuse.weightj'
+locationnexusnet_enhanced.onnx.dataj
+offset10304j
+length8192p*m  Bbody.1.conv1.weightj'
+locationnexusnet_enhanced.onnx.dataj
+offset135232j
+length36864p*n  Bbody.1.conv2.weightj'
+locationnexusnet_enhanced.onnx.dataj
+offset421952j
+length102400p*j @Bbody.1.fuse.weightj'
+locationnexusnet_enhanced.onnx.dataj
+offset18496j
+length8192p*m  Bbody.2.conv1.weightj'
+locationnexusnet_enhanced.onnx.dataj
+offset172096j
+length36864p*n  Bbody.2.conv2.weightj'
+locationnexusnet_enhanced.onnx.dataj
+offset524352j
+length102400p*j @Bbody.2.fuse.weightj'
+locationnexusnet_enhanced.onnx.dataj
+offset26688j
+length8192p*m  Bbody.3.conv1.weightj'
+locationnexusnet_enhanced.onnx.dataj
+offset208960j
+length36864p*n  Bbody.3.conv2.weightj'
+locationnexusnet_enhanced.onnx.dataj
+offset626752j
+length102400p*j @Bbody.3.fuse.weightj'
+locationnexusnet_enhanced.onnx.dataj
+offset34880j
+length8192p*f  Bresidual.weightj'
+locationnexusnet_enhanced.onnx.dataj
+offset6208j
+length4096p*pÄ Bupscale.up1.0.weightj'
+locationnexusnet_enhanced.onnx.dataj
+offset729152j
+length147456p*pÄ Bupscale.up2.0.weightj'
+locationnexusnet_enhanced.onnx.dataj
+offset876608j
+length147456p*q  Bupscale.refine.0.weightj'
+locationnexusnet_enhanced.onnx.dataj
+offset245824j
+length36864p*q  Bupscale.refine.2.weightj'
+locationnexusnet_enhanced.onnx.dataj
+offset282688j
+length36864p*f Btail.0.weightj'
+locationnexusnet_enhanced.onnx.dataj
+offset43072j
+length18432p*Bval_10J“Êx>*Bval_11J^≤z>*Bval_12Juåv>*Bval_14JLÏv>*Bval_16JÜv>*Bval_18Jµ“v>*Bval_20Jn{>*Bval_21JÊC}>*Bval_24Jp             *Bval_26J¢œz>*Bval_27JJr|>*Bval_28J}|>Z⁄
 input+
 )%
 
@@ -1079,16 +950,16 @@ batch_size
 /pkg.torch.export.graph_signature.InputSpec.kind
 USER_INPUT"=
 5pkg.torch.export.graph_signature.InputSpec.persistentNone"&
-!pkg.torch.onnx.original_node_namexb∏
-output=
-;7
+!pkg.torch.onnx.original_node_namexbù
+output"
+ 
 
 batch_size
 
-((3*height)//2)
-((3*width)//2)"?
+
+Ä"?
 0pkg.torch.export.graph_signature.OutputSpec.kindUSER_OUTPUT".
-!pkg.torch.onnx.original_node_name	sigmoid_4j⁄
+!pkg.torch.onnx.original_node_name	conv2d_20j⁄
 head.0.weight
 
  
@@ -1125,39 +996,14 @@ batch_size
  "<
 /pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
 5pkg.torch.export.graph_signature.InputSpec.persistentNone"8
-!pkg.torch.onnx.original_node_namep_body_0_conv2_biasjÚ
-body.0.attention.1.weight
-
-
- 
-
-"<
-/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
-5pkg.torch.export.graph_signature.InputSpec.persistentNone"@
-!pkg.torch.onnx.original_node_namep_body_0_attention_1_weightj‚
-body.0.attention.1.bias
-
-
-"<
-/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
-5pkg.torch.export.graph_signature.InputSpec.persistentNone">
-!pkg.torch.onnx.original_node_namep_body_0_attention_1_biasjÚ
-body.0.attention.3.weight
-
- 
-
-
-"<
-/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
-5pkg.torch.export.graph_signature.InputSpec.persistentNone"@
-!pkg.torch.onnx.original_node_namep_body_0_attention_3_weightj‚
-body.0.attention.3.bias
+!pkg.torch.onnx.original_node_namep_body_0_conv2_biasj‘
+body.0.fuse.bias
 
 
  "<
 /pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
-5pkg.torch.export.graph_signature.InputSpec.persistentNone">
-!pkg.torch.onnx.original_node_namep_body_0_attention_3_biasj÷
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"7
+!pkg.torch.onnx.original_node_namep_body_0_fuse_biasj÷
 body.1.conv1.bias
 
 
@@ -1171,39 +1017,14 @@ batch_size
  "<
 /pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
 5pkg.torch.export.graph_signature.InputSpec.persistentNone"8
-!pkg.torch.onnx.original_node_namep_body_1_conv2_biasjÚ
-body.1.attention.1.weight
-
-
- 
-
-"<
-/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
-5pkg.torch.export.graph_signature.InputSpec.persistentNone"@
-!pkg.torch.onnx.original_node_namep_body_1_attention_1_weightj‚
-body.1.attention.1.bias
-
-
-"<
-/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
-5pkg.torch.export.graph_signature.InputSpec.persistentNone">
-!pkg.torch.onnx.original_node_namep_body_1_attention_1_biasjÚ
-body.1.attention.3.weight
-
- 
-
-
-"<
-/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
-5pkg.torch.export.graph_signature.InputSpec.persistentNone"@
-!pkg.torch.onnx.original_node_namep_body_1_attention_3_weightj‚
-body.1.attention.3.bias
+!pkg.torch.onnx.original_node_namep_body_1_conv2_biasj‘
+body.1.fuse.bias
 
 
  "<
 /pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
-5pkg.torch.export.graph_signature.InputSpec.persistentNone">
-!pkg.torch.onnx.original_node_namep_body_1_attention_3_biasj÷
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"7
+!pkg.torch.onnx.original_node_namep_body_1_fuse_biasj÷
 body.2.conv1.bias
 
 
@@ -1217,39 +1038,14 @@ batch_size
  "<
 /pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
 5pkg.torch.export.graph_signature.InputSpec.persistentNone"8
-!pkg.torch.onnx.original_node_namep_body_2_conv2_biasjÚ
-body.2.attention.1.weight
-
-
- 
-
-"<
-/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
-5pkg.torch.export.graph_signature.InputSpec.persistentNone"@
-!pkg.torch.onnx.original_node_namep_body_2_attention_1_weightj‚
-body.2.attention.1.bias
-
-
-"<
-/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
-5pkg.torch.export.graph_signature.InputSpec.persistentNone">
-!pkg.torch.onnx.original_node_namep_body_2_attention_1_biasjÚ
-body.2.attention.3.weight
-
- 
-
-
-"<
-/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
-5pkg.torch.export.graph_signature.InputSpec.persistentNone"@
-!pkg.torch.onnx.original_node_namep_body_2_attention_3_weightj‚
-body.2.attention.3.bias
+!pkg.torch.onnx.original_node_namep_body_2_conv2_biasj‘
+body.2.fuse.bias
 
 
  "<
 /pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
-5pkg.torch.export.graph_signature.InputSpec.persistentNone">
-!pkg.torch.onnx.original_node_namep_body_2_attention_3_biasj÷
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"7
+!pkg.torch.onnx.original_node_namep_body_2_fuse_biasj÷
 body.3.conv1.bias
 
 
@@ -1263,45 +1059,33 @@ batch_size
  "<
 /pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
 5pkg.torch.export.graph_signature.InputSpec.persistentNone"8
-!pkg.torch.onnx.original_node_namep_body_3_conv2_biasjÚ
-body.3.attention.1.weight
-
-
- 
-
-"<
-/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
-5pkg.torch.export.graph_signature.InputSpec.persistentNone"@
-!pkg.torch.onnx.original_node_namep_body_3_attention_1_weightj‚
-body.3.attention.1.bias
-
-
-"<
-/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
-5pkg.torch.export.graph_signature.InputSpec.persistentNone">
-!pkg.torch.onnx.original_node_namep_body_3_attention_1_biasjÚ
-body.3.attention.3.weight
-
- 
-
-
-"<
-/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
-5pkg.torch.export.graph_signature.InputSpec.persistentNone"@
-!pkg.torch.onnx.original_node_namep_body_3_attention_3_weightj‚
-body.3.attention.3.bias
+!pkg.torch.onnx.original_node_namep_body_3_conv2_biasj‘
+body.3.fuse.bias
 
 
  "<
 /pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
-5pkg.torch.export.graph_signature.InputSpec.persistentNone">
-!pkg.torch.onnx.original_node_namep_body_3_attention_3_biasj◊
-upscale.conv.bias
-	
-†"<
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"7
+!pkg.torch.onnx.original_node_namep_body_3_fuse_biasjŒ
+residual.bias
+
+
+ "<
 /pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
-5pkg.torch.export.graph_signature.InputSpec.persistentNone"8
-!pkg.torch.onnx.original_node_namep_upscale_conv_biasjﬁ
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"4
+!pkg.torch.onnx.original_node_namep_residual_biasjŸ
+upscale.up1.0.bias
+	
+Ä"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"9
+!pkg.torch.onnx.original_node_namep_upscale_up1_0_biasjŸ
+upscale.up2.0.bias
+	
+Ä"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"9
+!pkg.torch.onnx.original_node_namep_upscale_up2_0_biasjﬁ
 upscale.refine.0.bias
 
 
@@ -1361,11 +1145,20 @@ batch_size
 
  
  
-
-"<
+
+"<
 /pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
 5pkg.torch.export.graph_signature.InputSpec.persistentNone":
-!pkg.torch.onnx.original_node_namep_body_0_conv2_weightjÊ
+!pkg.torch.onnx.original_node_namep_body_0_conv2_weightj‰
+body.0.fuse.weight
+
+ 
+@
+
+"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"9
+!pkg.torch.onnx.original_node_namep_body_0_fuse_weightjÊ
 body.1.conv1.weight
 
  
@@ -1379,11 +1172,20 @@ batch_size
 
  
  
-
-"<
+
+"<
 /pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
 5pkg.torch.export.graph_signature.InputSpec.persistentNone":
-!pkg.torch.onnx.original_node_namep_body_1_conv2_weightjÊ
+!pkg.torch.onnx.original_node_namep_body_1_conv2_weightj‰
+body.1.fuse.weight
+
+ 
+@
+
+"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"9
+!pkg.torch.onnx.original_node_namep_body_1_fuse_weightjÊ
 body.2.conv1.weight
 
  
@@ -1397,11 +1199,20 @@ batch_size
 
  
  
-
-"<
+
+"<
 /pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
 5pkg.torch.export.graph_signature.InputSpec.persistentNone":
-!pkg.torch.onnx.original_node_namep_body_2_conv2_weightjÊ
+!pkg.torch.onnx.original_node_namep_body_2_conv2_weightj‰
+body.2.fuse.weight
+
+ 
+@
+
+"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"9
+!pkg.torch.onnx.original_node_namep_body_2_fuse_weightjÊ
 body.3.conv1.weight
 
  
@@ -1415,20 +1226,47 @@ batch_size
 
  
  
-
-"<
+
+"<
 /pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
 5pkg.torch.export.graph_signature.InputSpec.persistentNone":
-!pkg.torch.onnx.original_node_namep_body_3_conv2_weightjÁ
-upscale.conv.weight
+!pkg.torch.onnx.original_node_namep_body_3_conv2_weightj‰
+body.3.fuse.weight
+
+ 
+@
+
+"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"9
+!pkg.torch.onnx.original_node_namep_body_3_fuse_weightjﬁ
+residual.weight
+
+ 
+ 
+
+"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone"6
+!pkg.torch.onnx.original_node_namep_residual_weightjÈ
+upscale.up1.0.weight
 
-†
+Ä
  
 
 "<
 /pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
-5pkg.torch.export.graph_signature.InputSpec.persistentNone":
-!pkg.torch.onnx.original_node_namep_upscale_conv_weightjÓ
+5pkg.torch.export.graph_signature.InputSpec.persistentNone";
+!pkg.torch.onnx.original_node_namep_upscale_up1_0_weightjÈ
+upscale.up2.0.weight
+
+Ä
+ 
+
+"<
+/pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
+5pkg.torch.export.graph_signature.InputSpec.persistentNone";
+!pkg.torch.onnx.original_node_namep_upscale_up2_0_weightjÓ
 upscale.refine.0.weight
 
  
@@ -1455,103 +1293,90 @@ batch_size
 "<
 /pkg.torch.export.graph_signature.InputSpec.kind	PARAMETER"=
 5pkg.torch.export.graph_signature.InputSpec.persistentNone"4
-!pkg.torch.onnx.original_node_namep_tail_0_weightje
-val_15
+!pkg.torch.onnx.original_node_namep_tail_0_weightjd
+val_10
 
 
 
 
-"C
-$pkg.onnxscript.optimizer.folded_from['head.1.weight', 'val_14']je
+"B
+$pkg.onnxscript.optimizer.folded_from['head.1.weight', 'val_9']jd
+val_11
+
+
+
+
+"B
+$pkg.onnxscript.optimizer.folded_from['head.3.weight', 'val_9']jj
+val_12
+
+
+
+
+"H
+$pkg.onnxscript.optimizer.folded_from ['body.0.prelu.weight', 'val_9']jj
+val_14
+
+
+
+
+"H
+$pkg.onnxscript.optimizer.folded_from ['body.1.prelu.weight', 'val_9']jj
 val_16
 
 
 
 
-"C
-$pkg.onnxscript.optimizer.folded_from['head.3.weight', 'val_14']jl
-val_17
+"H
+$pkg.onnxscript.optimizer.folded_from ['body.2.prelu.weight', 'val_9']jj
+val_18
 
 
 
 
-"J
-$pkg.onnxscript.optimizer.folded_from"['body.0.prelu1.weight', 'val_14']jR
-val_20
-
-
-"<
-$pkg.onnxscript.optimizer.folded_from['val_18', 'val_19']jq
+"H
+$pkg.onnxscript.optimizer.folded_from ['body.3.prelu.weight', 'val_9']jk
+val_20
+
+
+
+
+"I
+$pkg.onnxscript.optimizer.folded_from!['upscale.up1.2.weight', 'val_9']jk
 val_21
 
 
 
 
-"O
-$pkg.onnxscript.optimizer.folded_from'['body.0.attention.2.weight', 'val_14']jl
-val_22
-
-
-
-
-"J
-$pkg.onnxscript.optimizer.folded_from"['body.1.prelu1.weight', 'val_14']jq
-val_25
-
-
-
-
-"O
-$pkg.onnxscript.optimizer.folded_from'['body.1.attention.2.weight', 'val_14']jl
+"I
+$pkg.onnxscript.optimizer.folded_from!['upscale.up2.2.weight', 'val_9']jH
+val_24
+
+
+"2
+$pkg.onnxscript.optimizer.folded_from
+['val_23']jn
 val_26
 
 
 
 
-"J
-$pkg.onnxscript.optimizer.folded_from"['body.2.prelu1.weight', 'val_14']jq
-val_29
+"L
+$pkg.onnxscript.optimizer.folded_from$['upscale.refine.1.weight', 'val_9']jn
+val_27
 
 
 
 
-"O
-$pkg.onnxscript.optimizer.folded_from'['body.2.attention.2.weight', 'val_14']jl
-val_30
+"L
+$pkg.onnxscript.optimizer.folded_from$['upscale.refine.3.weight', 'val_9']jd
+val_28
 
 
 
 
-"J
-$pkg.onnxscript.optimizer.folded_from"['body.3.prelu1.weight', 'val_14']jq
-val_33
-
-
-
-
-"O
-$pkg.onnxscript.optimizer.folded_from'['body.3.attention.2.weight', 'val_14']jo
-val_34
-
-
-
-
-"M
-$pkg.onnxscript.optimizer.folded_from%['upscale.refine.1.weight', 'val_14']jo
-val_35
-
-
-
-
-"M
-$pkg.onnxscript.optimizer.folded_from%['upscale.refine.3.weight', 'val_14']je
-val_36
-
-
-
-
-"C
-$pkg.onnxscript.optimizer.folded_from['tail.1.weight', 'val_14']j5
+"B
+$pkg.onnxscript.optimizer.folded_from['tail.1.weight', 'val_9']j5
 conv2d+
 )%
 
@@ -1600,57 +1425,36 @@ batch_size
 batch_size
  
 height
-widthj(
-mean 
-
+widthj6
+prelu_3+
+)%
 
 batch_size
  
-
-j,
-conv2d_4 
-
+height
+widthj2
+cat+
+)%
 
 batch_size
-
-
-j+
-prelu_3 
-
-
-batch_size
-
-
-j,
-conv2d_5 
-
-
-batch_size
- 
-
-j+
-sigmoid 
-
-
-batch_size
- 
-
-j5
-mul_57+
+@
+height
+widthj7
+conv2d_4+
 )%
 
 batch_size
  
 height
 widthj5
-add_67+
+add_50+
 )%
 
 batch_size
  
 height
 widthj7
-conv2d_6+
+conv2d_5+
 )%
 
 batch_size
@@ -1664,63 +1468,42 @@ batch_size
  
 height
 widthj7
-conv2d_7+
-)%
-
-batch_size
- 
-height
-widthj*
-mean_1 
-
-
-batch_size
- 
-
-j,
-conv2d_8 
-
-
-batch_size
-
-
-j+
-prelu_5 
-
-
-batch_size
-
-
-j,
-conv2d_9 
-
-
-batch_size
- 
-
-j-
-	sigmoid_1 
-
-
-batch_size
- 
-
-j5
-mul_89+
+conv2d_6+
 )%
 
 batch_size
  
 height
 widthj6
-add_118+
+prelu_5+
 )%
 
 batch_size
  
 height
-widthj8
-	conv2d_10+
+widthj4
+cat_1+
+)%
+
+batch_size
+@
+height
+widthj7
+conv2d_7+
+)%
+
+batch_size
+ 
+height
+widthj5
+add_86+
+)%
+
+batch_size
+ 
+height
+widthj7
+conv2d_8+
 )%
 
 batch_size
@@ -1733,64 +1516,43 @@ batch_size
 batch_size
  
 height
-widthj8
-	conv2d_11+
-)%
-
-batch_size
- 
-height
-widthj*
-mean_2 
-
-
-batch_size
- 
-
-j-
-	conv2d_12 
-
-
-batch_size
-
-
-j+
-prelu_7 
-
-
-batch_size
-
-
-j-
-	conv2d_13 
-
-
-batch_size
- 
-
-j-
-	sigmoid_2 
-
-
-batch_size
- 
-
-j6
-mul_121+
+widthj7
+conv2d_9+
 )%
 
 batch_size
  
 height
 widthj6
-add_169+
+prelu_7+
+)%
+
+batch_size
+ 
+height
+widthj4
+cat_2+
+)%
+
+batch_size
+@
+height
+widthj8
+	conv2d_10+
+)%
+
+batch_size
+ 
+height
+widthj6
+add_122+
 )%
 
 batch_size
  
 height
 widthj8
-	conv2d_14+
+	conv2d_11+
 )%
 
 batch_size
@@ -1804,67 +1566,60 @@ batch_size
  
 height
 widthj8
-	conv2d_15+
-)%
-
-batch_size
- 
-height
-widthj*
-mean_3 
-
-
-batch_size
- 
-
-j-
-	conv2d_16 
-
-
-batch_size
-
-
-j+
-prelu_9 
-
-
-batch_size
-
-
-j-
-	conv2d_17 
-
-
-batch_size
- 
-
-j-
-	sigmoid_3 
-
-
-batch_size
- 
-
-j6
-mul_153+
+	conv2d_12+
 )%
 
 batch_size
  
 height
 widthj6
-add_220+
+prelu_9+
+)%
+
+batch_size
+ 
+height
+widthj4
+cat_3+
+)%
+
+batch_size
+@
+height
+widthj8
+	conv2d_13+
+)%
+
+batch_size
+ 
+height
+widthj6
+add_158+
+)%
+
+batch_size
+ 
+height
+widthj8
+	conv2d_14+
+)%
+
+batch_size
+ 
+height
+widthj6
+add_169+
 )%
 
 batch_size
  
 height
 widthj9
-	conv2d_18,
+	conv2d_15,
 *&
 
 batch_size
-†
+Ä
 height
 widthj@
 pixel_shuffle/
@@ -1873,66 +1628,98 @@ batch_size
 batch_size
  
 
-3*height
-	3*widthjK
+2*height
+	2*widthj;
+prelu_10/
+-)
+
+batch_size
+ 
 
-avg_pool2d=
-;7
+2*height
+	2*widthj=
+	conv2d_160
+.*
+
+batch_size
+Ä
+
+2*height
+	2*widthjB
+pixel_shuffle_1/
+-)
 
 batch_size
  
-((3*height)//2)
-((3*width)//2)jJ
-	conv2d_19=
-;7
+
+4*height
+	4*widthj;
+prelu_11/
+-)
 
 batch_size
  
-((3*height)//2)
-((3*width)//2)jI
-prelu_10=
-;7
+
+4*height
+	4*widthj
+val_22
+
+
+j
+val_25
+
+
+j9
+upsample_bilinear2d"
+ 
 
 batch_size
  
-((3*height)//2)
-((3*width)//2)jJ
-	conv2d_20=
-;7
+
+Äj/
+	conv2d_17"
+ 
 
 batch_size
  
-((3*height)//2)
-((3*width)//2)jI
-prelu_11=
-;7
+
+Äj.
+prelu_12"
+ 
 
 batch_size
  
-((3*height)//2)
-((3*width)//2)jJ
-	conv2d_21=
-;7
+
+Äj/
+	conv2d_18"
+ 
+
+batch_size
+ 
+
+Äj.
+prelu_13"
+ 
+
+batch_size
+ 
+
+Äj/
+	conv2d_19"
+ 
 
 batch_size
 
-((3*height)//2)
-((3*width)//2)jI
-prelu_12=
-;7
+
+Äj.
+prelu_14"
+ 
 
 batch_size
 
-((3*height)//2)
-((3*width)//2)jJ
-	conv2d_22=
-;7
-
-batch_size
-
-((3*height)//2)
-((3*width)//2)ÇÅ
-0pkg.torch.export.ExportedProgram.graph_signatureÃ
+
+ÄÇâ
+0pkg.torch.export.ExportedProgram.graph_signature‘
 # inputs
 p_head_0_weight: PARAMETER target='head.0.weight'
 p_head_0_bias: PARAMETER target='head.0.bias'
@@ -1942,46 +1729,40 @@ p_head_2_bias: PARAMETER target='head.2.bias'
 p_head_3_weight: PARAMETER target='head.3.weight'
 p_body_0_conv1_weight: PARAMETER target='body.0.conv1.weight'
 p_body_0_conv1_bias: PARAMETER target='body.0.conv1.bias'
-p_body_0_prelu1_weight: PARAMETER target='body.0.prelu1.weight'
 p_body_0_conv2_weight: PARAMETER target='body.0.conv2.weight'
 p_body_0_conv2_bias: PARAMETER target='body.0.conv2.bias'
-p_body_0_attention_1_weight: PARAMETER target='body.0.attention.1.weight'
-p_body_0_attention_1_bias: PARAMETER target='body.0.attention.1.bias'
-p_body_0_attention_2_weight: PARAMETER target='body.0.attention.2.weight'
-p_body_0_attention_3_weight: PARAMETER target='body.0.attention.3.weight'
-p_body_0_attention_3_bias: PARAMETER target='body.0.attention.3.bias'
+p_body_0_fuse_weight: PARAMETER target='body.0.fuse.weight'
+p_body_0_fuse_bias: PARAMETER target='body.0.fuse.bias'
+p_body_0_prelu_weight: PARAMETER target='body.0.prelu.weight'
 p_body_1_conv1_weight: PARAMETER target='body.1.conv1.weight'
 p_body_1_conv1_bias: PARAMETER target='body.1.conv1.bias'
-p_body_1_prelu1_weight: PARAMETER target='body.1.prelu1.weight'
 p_body_1_conv2_weight: PARAMETER target='body.1.conv2.weight'
 p_body_1_conv2_bias: PARAMETER target='body.1.conv2.bias'
-p_body_1_attention_1_weight: PARAMETER target='body.1.attention.1.weight'
-p_body_1_attention_1_bias: PARAMETER target='body.1.attention.1.bias'
-p_body_1_attention_2_weight: PARAMETER target='body.1.attention.2.weight'
-p_body_1_attention_3_weight: PARAMETER target='body.1.attention.3.weight'
-p_body_1_attention_3_bias: PARAMETER target='body.1.attention.3.bias'
+p_body_1_fuse_weight: PARAMETER target='body.1.fuse.weight'
+p_body_1_fuse_bias: PARAMETER target='body.1.fuse.bias'
+p_body_1_prelu_weight: PARAMETER target='body.1.prelu.weight'
 p_body_2_conv1_weight: PARAMETER target='body.2.conv1.weight'
 p_body_2_conv1_bias: PARAMETER target='body.2.conv1.bias'
-p_body_2_prelu1_weight: PARAMETER target='body.2.prelu1.weight'
 p_body_2_conv2_weight: PARAMETER target='body.2.conv2.weight'
 p_body_2_conv2_bias: PARAMETER target='body.2.conv2.bias'
-p_body_2_attention_1_weight: PARAMETER target='body.2.attention.1.weight'
-p_body_2_attention_1_bias: PARAMETER target='body.2.attention.1.bias'
-p_body_2_attention_2_weight: PARAMETER target='body.2.attention.2.weight'
-p_body_2_attention_3_weight: PARAMETER target='body.2.attention.3.weight'
-p_body_2_attention_3_bias: PARAMETER target='body.2.attention.3.bias'
+p_body_2_fuse_weight: PARAMETER target='body.2.fuse.weight'
+p_body_2_fuse_bias: PARAMETER target='body.2.fuse.bias'
+p_body_2_prelu_weight: PARAMETER target='body.2.prelu.weight'
 p_body_3_conv1_weight: PARAMETER target='body.3.conv1.weight'
 p_body_3_conv1_bias: PARAMETER target='body.3.conv1.bias'
-p_body_3_prelu1_weight: PARAMETER target='body.3.prelu1.weight'
 p_body_3_conv2_weight: PARAMETER target='body.3.conv2.weight'
 p_body_3_conv2_bias: PARAMETER target='body.3.conv2.bias'
-p_body_3_attention_1_weight: PARAMETER target='body.3.attention.1.weight'
-p_body_3_attention_1_bias: PARAMETER target='body.3.attention.1.bias'
-p_body_3_attention_2_weight: PARAMETER target='body.3.attention.2.weight'
-p_body_3_attention_3_weight: PARAMETER target='body.3.attention.3.weight'
-p_body_3_attention_3_bias: PARAMETER target='body.3.attention.3.bias'
-p_upscale_conv_weight: PARAMETER target='upscale.conv.weight'
-p_upscale_conv_bias: PARAMETER target='upscale.conv.bias'
+p_body_3_fuse_weight: PARAMETER target='body.3.fuse.weight'
+p_body_3_fuse_bias: PARAMETER target='body.3.fuse.bias'
+p_body_3_prelu_weight: PARAMETER target='body.3.prelu.weight'
+p_residual_weight: PARAMETER target='residual.weight'
+p_residual_bias: PARAMETER target='residual.bias'
+p_upscale_up1_0_weight: PARAMETER target='upscale.up1.0.weight'
+p_upscale_up1_0_bias: PARAMETER target='upscale.up1.0.bias'
+p_upscale_up1_2_weight: PARAMETER target='upscale.up1.2.weight'
+p_upscale_up2_0_weight: PARAMETER target='upscale.up2.0.weight'
+p_upscale_up2_0_bias: PARAMETER target='upscale.up2.0.bias'
+p_upscale_up2_2_weight: PARAMETER target='upscale.up2.2.weight'
 p_upscale_refine_0_weight: PARAMETER target='upscale.refine.0.weight'
 p_upscale_refine_0_bias: PARAMETER target='upscale.refine.0.bias'
 p_upscale_refine_1_weight: PARAMETER target='upscale.refine.1.weight'
@@ -1996,7 +1777,7 @@ p_tail_2_bias: PARAMETER target='tail.2.bias'
 x: USER_INPUT
 
 # outputs
-sigmoid_4: USER_OUTPUT
+conv2d_20: USER_OUTPUT
 Çq
 2pkg.torch.export.ExportedProgram.range_constraints;{s77: VR[0, int_oo], s53: VR[0, int_oo], s0: VR[0, int_oo]}B
  

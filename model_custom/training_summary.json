@@ -1,12 +1,13 @@
 {
-  "best_psnr": 34.774343979064135,
-  "best_ssim": 0.9260501861572266,
-  "final_psnr": 34.44408824605275,
-  "final_ssim": 0.9230523109436035,
+  "model_type": "NexusNetEnhanced",
+  "best_psnr": 37.7556365477611,
+  "best_ssim": 0.9451092481613159,
+  "final_psnr": 37.7556365477611,
+  "final_ssim": 0.9451092481613159,
   "features": 32,
   "num_blocks": 4,
-  "epochs": 10,
+  "epochs": 2,
   "batch_size": 32,
   "patch_size": 96,
-  "model_size_mb": 0.09155750274658203
+  "model_size_mb": 0.0768747329711914
 }

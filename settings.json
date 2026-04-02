@@ -1,5 +1,5 @@
 {
-  "batch_size": 1,
+  "batch_size": 5,
   "ram_limit": 80,
   "cpu_limit": 60,
   "denoise": false,
